@@ -1,6 +1,6 @@
 # Social Internet Unconference
 
-An online unconference on funding the social internet, co-organized with [Roomy](https://roomy.space).
+An online unconference on funding the social internet, developed with Erlend Sogge Heggen of [Roomy](https://roomy.space).
 
 This repo is the **planning home** while the event is still being shaped. It is not the event site. Nothing here is announced — most of it is still undecided, and the open questions below are the actual work.
 
@@ -8,9 +8,11 @@ This repo is the **planning home** while the event is still being shaped. It is 
 
 **Nothing is settled yet.** As of 2026-07-21 there is agreement to do it, one locked theme, and a proposed venue. No name, no date, no format, no invite list.
 
+This repo is private because it names people who have not been approached and quotes a private conversation. Before it is made public, the README and every issue need scrubbing for both.
+
 ## What this is
 
-An online unconference in the classic format — participants register, agree the topics together at the start, then move between rooms. Not a keynote conference with a fixed agenda.
+The intent is an unconference rather than a keynote conference — participants agree the topics together at the start and move between rooms, as in the in-person events Artem drew the idea from. How that works when everyone is remote is open (issue #6).
 
 The framing is deliberately cross-community: not a CIBC event and not a Roomy event, but a shared one that pulls in several adjacent communities around a common set of questions.
 
@@ -44,7 +46,7 @@ Each of these is an issue in this repo.
 2. Is Streamplace actually available and willing?
 3. What are the remaining two or three themes?
 4. Who joins the Roomy coordination space, and what channels does it need?
-5. Who is invited, and who else co-organizes?
+5. Who is invited, and who co-organizes?
 6. When does it happen, how long does it run, and how many people is it for?
 
 ## Background
