@@ -16,11 +16,13 @@ This repo is the **planning home** while the event is still being shaped. It is 
 - A **structural frame** for the work: two work streams, not two projects (below).
 - **Invite criteria** stated, and a first concrete lead.
 
+**Then, the same evening**, Erlend proposed a concrete stack and a funding route in a message to Artem (18:52), and Artem named the format problem as a service-design challenge (19:08). Both are folded in below.
+
 **Still open**
 
 - **No name.** No date. No decision on scale.
-- **Streamplace has still not been approached** — nobody has contacted Eli. Unchanged since 2026-07-21.
 - No invite list, and no co-organiser for the organising work stream.
+- **Nobody has contacted Eli at Streamplace** — unchanged since 2026-07-21, though it is no longer a blocker (see Infrastructure).
 
 Artem's assessment on the call: *"it is a complex project — it's the most complex project that we have ever discussed so far in CIBC."*
 
@@ -38,10 +40,12 @@ The framing is deliberately cross-community: not a CIBC event and not a Roomy ev
 
 Raised by Chris Bland on the town hall: two different things were being discussed as if they were one.
 
-1. **Design** — how an ideal unconference should run, and what platforms and tech could support it. Chris's framing: *"the most human-centered, frictionless, decentralized, unowned, non-data-extractive kind of way."*
+1. **Design** — how an ideal unconference should run, and what platforms and tech could support it. Chris's framing: *"the most human-centered, frictionless, decentralized, unowned, non-data-extractive kind of way."* This stream now has concrete work in it: AT Proto logins on MiroTalk, the direct-to-Streamplace path, and the lobby below.
 2. **Organisation** — themes, tracks, people, invitations, logistics.
 
 Artem accepted the distinction but not a split into separate projects: *"it's not two different projects, it's just two different work streams."*
+
+**The lobby.** The hardest design problem, named by Artem (2026-07-30 19:08): *"I'm trying to think of it as a service design challenge. How can people co-create the schedule in the morning? I guess we need some kind of lobby for that."* An unconference agrees its agenda in the room; there is no obvious remote equivalent, and if rooms are MiroTalk instances then the lobby is whatever surface exists *before* rooms do. Note this is **synchronous, morning-of** — distinct from #8, which proposes Harmonica for **async, pre-event** agenda forming. The event may want both; nobody has decided.
 
 **Working method**, proposed by Megan Ducote and adopted as the sensible shape given capacity: small working groups that go away to research and collaborate, then reconvene — rather than everything running through one coordinating person.
 
@@ -73,9 +77,27 @@ The strategic reason for the guest list is partnership, not attendance: the even
 
 ## Infrastructure
 
-- **Coordination space: Roomy — exists.** A channel inside Erlend's existing "good tech" space rather than a dedicated server. Erlend: *"we just quickly threw something up just to have it done, but it hasn't been prepped really for anything yet."* Seeding it is issue #4.
-- **Also a Telegram thread** in the CIBC group — decided on the call to run both. Worth watching: the Season 2 retrospective's loudest operational complaint was that async coordination is already stifled and Telegram hard to sort through, so two surfaces needs one of them to be clearly primary.
-- **Venue: [Streamplace](https://stream.place) — proposed, not approached.** A Twitch-like streaming platform on AT Proto, built on Livepeer's decentralised streaming infrastructure, already used by AT Proto developers to livestream sessions. Nobody from Streamplace has been contacted. Issue #2.
+**Coordination**
+
+- **Roomy — exists.** A channel inside Erlend's existing "good tech" space rather than a dedicated server. Erlend: *"we just quickly threw something up just to have it done, but it hasn't been prepped really for anything yet."* Seeding it is issue #4.
+- **Also a Telegram thread** in the CIBC group — decided on the call to run both. Worth watching: the Season 2 retrospective's loudest operational complaint was that async coordination is already stifled and Telegram hard to sort through, so running two surfaces needs one of them to be clearly primary.
+
+**The event itself — a stack, not a venue**
+
+Erlend's proposal (2026-07-30) replaces "Streamplace hosts the unconference" with a two-layer stack:
+
+- **Rooms: [MiroTalk SFU](https://github.com/miroslavpejic85/mirotalksfu)**, extended with **AT Proto logins**.
+- **Streaming out: [Streamplace](https://stream.place)** — MiroTalk *"already has a version of this for its own streaming product,"* so the path partly exists.
+
+**Streamplace is open source and self-hostable**, its API is AT Proto lexicons (`place.stream.*` XRPC, `did:web:stream.place`), identity is already Bluesky handles, and per-instance branding is a first-class lexicon feature. Two consequences: a participant with a Bluesky handle carries **one identity across the whole stack**, and **nobody's permission is required for the technical path** — which turns contacting Eli from a dependency into a relationship worth having on its own merits.
+
+Caveats, because this is not yet verified end to end: the self-hosting guide was not readable when checked (2026-07-31), so nobody has confirmed the install process; and Streamplace is early, small software — a handful of concurrent streams at the time of checking — so it should not be assumed to absorb whatever scale #6 lands on.
+
+**Alternative to MiroTalk:** [suitenumerique/meet](https://github.com/suitenumerique/meet), which Erlend rated technically comparable but rejected on funding grounds — *"then the sponsorship source is something more nebulous."*
+
+**Funding**
+
+- **Recall.ai** proposed as a sponsor (#10): they already sponsor MiroTalk, and Harmonica is already a Recall.ai customer, so there may be a route to a person rather than a form. Note the reflexivity — funding open-source work is one of the candidate themes, so how this event is funded is itself on topic.
 
 ## A constraint worth designing for
 
@@ -90,7 +112,7 @@ Connections that continue are the measure, not attendance or session quality. Is
 Each is an issue in this repo.
 
 1. **#1** — What is it called?
-2. **#2** — Is Streamplace actually available and willing?
+2. **#2** — Which stack: hosted Streamplace, self-hosted, or MiroTalk streaming into it? And separately, do we want Eli involved?
 3. **#3** — Which themes are central, and which are tracks?
 4. **#4** — Seeding the Roomy space: what channels does it need?
 5. **#5** — Who is invited?
@@ -98,6 +120,7 @@ Each is an issue in this repo.
 7. **#7** — Who co-organises?
 8. **#8** — Using Harmonica to form the agenda and capture session reflections.
 9. **#9** — Where do connections go afterwards?
+10. **#10** — Sponsorship: approach Recall.ai, and does the stack choice follow the money?
 
 ## Background
 
