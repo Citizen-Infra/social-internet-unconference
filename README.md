@@ -54,8 +54,11 @@ Artem accepted the distinction but not a split into separate projects: *"it's no
 - **Artem Zhiganov (CIBC)** — drives and coordinates.
 - **Erlend Sogge Heggen (Roomy)** — shaping and theming, and attends. He was explicit that coordination is not his role.
 - **Tracy Kunkler** — advising on Open Space Technology as the format. Confirmed 2026-07-30. Her capacity is limited and she said so directly; scope asks to something specific and small rather than open-ended organising.
+- **Megan Ducote (CIBC)** — proposed the small-working-groups method and the after-event constraint (#9). Role not defined beyond that.
 
-No co-organiser for the organisation work stream. See issue #7.
+**Repo access:** three admins — Artem (`zhiganov`), Erlend (`erlend-sh`), Megan (`HoustonBloom`). Anything written here is visible to all three; it is not a staging area.
+
+**Still no co-organiser for the organisation work stream** (#7) — repo access is not the same as having taken that on, and nobody has.
 
 ## Themes
 
