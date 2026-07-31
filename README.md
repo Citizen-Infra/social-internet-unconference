@@ -100,7 +100,7 @@ Caveats, because this is not yet verified end to end: the self-hosting guide was
 
 **Funding**
 
-- **Recall.ai** proposed as a sponsor (#10): they already sponsor MiroTalk, and Harmonica is already a Recall.ai customer, so there may be a route to a person rather than a form. Note the reflexivity — funding open-source work is one of the candidate themes, so how this event is funded is itself on topic.
+- **Recall.ai** proposed as a sponsor (#10): they already sponsor MiroTalk. Note the reflexivity — funding open-source work is one of the candidate themes, so how this event is funded is itself on topic.
 
 ## A constraint worth designing for
 
