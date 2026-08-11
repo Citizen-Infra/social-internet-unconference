@@ -24,26 +24,27 @@ production-complete until that requirement is resolved.
 
 | Slice | Outcome | Primary repositories | Depends on |
 |---|---|---|---|
-| V1 | Unconference project and brain round-trip | Harmonica, SIU planning/brain repo | - |
+| V1 | Unconference project and brain round-trip | Harmonica, `social-internet-unconference` repo | - |
 | V2 | Facilitated topic formation and review | Harmonica | V1 |
 | V3 | Bluesky publication and identity-aware support | Harmonica, community-admin | V2 |
 | V4 | Reusable availability and readiness | community-admin, Avails, Harmonica | V3 |
 | V5 | Organizer promotion and event distribution | community-admin, Avails, scenius-digest | V4 |
 | V6 | Private recorded session and transcript access | community-admin, SIU connector/infra | V5 |
-| V7 | Approved synthesis and digest return | community-admin, SIU brain, scenius-digest | V6 |
-| V8 | Session and whole-project reflection loop | Harmonica, SIU brain | V7 |
+| V7 | Approved synthesis and digest return | community-admin, SIU repo, scenius-digest | V6 |
+| V8 | Session and whole-project reflection loop | Harmonica, SIU repo | V7 |
 
-## V1: Unconference Project And Brain
+## V1: Unconference Project And Brain Directory
 
 **Demo:** Create an Unconference project, bind its community and GitHub
 repository, create a draft topic file, and see the same stable draft in
-Harmonica and `unconference-brain/topics/` after edits from either side.
+Harmonica and `social-internet-unconference/unconference-brain/topics/` after
+edits from either side.
 
 | Area | Scope |
 |---|---|
 | Harmonica UI | Add immutable `unconference` project type and `/u/[slug]` shell; expose community and repository setup. |
 | Harmonica code | Add the managed-container adapter, topic schema/parser, stable ID allocation, App-commit echo suppression, and human-edit ingestion. |
-| Brain | Create `unconference-brain/README.md`, `topics/`, and `sessions/` contracts without voter, attendee, or transcript bodies. |
+| Brain directory | Create `unconference-brain/README.md`, `topics/`, and `sessions/` contracts inside the SIU repository without voter, attendee, or transcript bodies. |
 | Affordances | U1, U2, U24; N1, N2, N8, N9, N26; S1-S3. |
 
 Acceptance:

@@ -40,7 +40,7 @@ pilot eventually changes the proposed MiroTalk main-event room stack.
 |---|---|
 | Project type | Add immutable Harmonica project type `unconference` with public route `/u/[slug]`. |
 | Community binding | Reuse the project's community-admin binding and fail-closed membership gate. |
-| Topic ownership | `unconference-brain/` is canonical. Harmonica may generate/review candidates and hold an operational projection; CA owns the cross-system coordination twin. |
+| Topic ownership | The `unconference-brain/` directory inside the `social-internet-unconference` repository is canonical. Harmonica may generate/review candidates and hold an operational projection; CA owns the cross-system coordination twin. |
 | Publication review | Exact duplicates may merge automatically. New cards and semantic merge suggestions require organizer review before publication. |
 | Late merge | Keep the oldest canonical card. Preserve all Bluesky posts as vote sources, deduplicate likers, and redirect retired posts to the canonical card. |
 | Harmonica vote identity | Count a verified Harmonica identity even without Bluesky. CA resolves email and DID votes through linked accounts at tally time. |
@@ -53,7 +53,7 @@ pilot eventually changes the proposed MiroTalk main-event room stack.
 | Recording and transcription | The pilot uses temporary JaaS file recording, immediate SIU ingestion, and Deepgram Nova-3 behind a provider-neutral SIU adapter. Production evaluates self-hosted Voxtral and still requires community-hosted recording plus transcription, or an explicit R5 change. |
 | Transcript access | Booked invitees have access immediately; authenticated room attendees are added after the session. |
 | Transcript storage | Full transcripts remain private community sources. A private repository mirror is optional but cannot enforce per-session access. |
-| Brain authority | `unconference-brain/` is a bidirectional canonical container. Valid human edits flow back through the GitHub App. |
+| Brain authority | `unconference-brain/` is a bidirectional canonical directory in the SIU repository. Valid human edits flow back through the GitHub App. |
 | External side effects | Repository edits never publish a Bluesky post, schedule a call, send invitations, or expose a transcript without an explicit organizer action. |
 | Harmonica role | Harmonica is one tool that consumes and contributes to community sources; it does not organize or own the unconference record. |
 

@@ -52,3 +52,7 @@
 - **Decisions:** Streamplace is the candidate public broadcast/discovery layer, not a room, lobby, attendance source, or private artifact store. It remains outside V1-V8. An SIU-controlled broadcaster identity and explicit organizer consent are required; ingest credentials remain secret.
 - **State:** The hosted ingest contract is credible, and SIU issue #2 now tracks the corrected technical and relationship decisions. MiroTalk room composition, operator failover, capacity, and self-hosted Streamplace remain open selection gates.
 - **Next:** Run a consented MiroTalk-to-compositor-to-Streamplace rehearsal after the main-event room and scale decisions.
+
+## 2026-08-11 — Canonical brain directory clarified
+- **Decision:** `unconference-brain/` is a first-class directory inside the `social-internet-unconference` repository, not a separate repository. The SIU repo is a single canonical planning-and-record container; we will not call it a monorepo unless it later contains independently versioned or buildable packages.
+- **Impact:** Harmonica connects the SIU repository and selects the `unconference-brain/` directory as its managed container. V1-V8 references now use this model.
