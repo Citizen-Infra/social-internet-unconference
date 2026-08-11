@@ -4,7 +4,7 @@ shaping: true
 
 # Unconference Platform - Shaping
 
-**Status:** Selected shape with two technical spikes outstanding
+**Status:** Selected pilot shape with production recorder decision outstanding
 **Date:** 2026-08-11
 
 ## Context
@@ -17,8 +17,8 @@ Jitsi, Meetily, Google Calendar, scenius-digest, and the GitHub repository each
 have a bounded role.
 
 This shape is additive to the event planning in the repository README. It does
-not settle the event name, date, scale, or whether Jitsi replaces the currently
-proposed MiroTalk room stack. That room-stack boundary is a spike below.
+not settle the event name, date, scale, or whether the JaaS scheduled-session
+pilot eventually changes the proposed MiroTalk main-event room stack.
 
 ## Requirements
 
@@ -47,9 +47,9 @@ proposed MiroTalk room stack. That room-stack boundary is a spike below.
 | Availability | Reusable community-scoped Avails. Topic support expresses willingness to attend; members do not repaint the same availability for every topic. |
 | Scheduling threshold | Three unique member supporters and one candidate slot shared by three of those supporters. |
 | Scheduling action | Passing the threshold marks a topic `ready`; only an organizer can promote it. |
-| Conferencing | The scheduling request explicitly asks for Jitsi; Avails must not silently add Jitsi to unrelated bookings. |
+| Conferencing | Pilot with JaaS for scheduled sessions. The scheduling request explicitly asks for it; Avails must not silently add Jitsi to unrelated bookings. This does not replace the proposed MiroTalk main-event stack. |
 | Calendar | A community-hosted Google Calendar connector writes the CA event to the shared calendar idempotently. |
-| Recording | Meetily is a CA integration deployed on SIU community infrastructure, with a recorder/adapter around it if required. |
+| Recording | The pilot uses temporary JaaS file recording followed by immediate ingestion into SIU storage and an SIU-hosted Meetily adapter. Production R5 still requires a community-hosted recorder or an explicit requirement change. |
 | Transcript access | Booked invitees have access immediately; authenticated room attendees are added after the session. |
 | Transcript storage | Full transcripts remain private community sources. A private repository mirror is optional but cannot enforce per-session access. |
 | Brain authority | `unconference-brain/` is a bidirectional canonical container. Valid human edits flow back through the GitHub App. |
@@ -64,8 +64,8 @@ proposed MiroTalk room stack. That room-stack boundary is a spike below.
 | A2 | Extract explicit proposals after linked Harmonica sessions, reconcile exact matches, put new cards or semantic merge suggestions through organizer review, and write accepted topic meaning and lineage into the brain. | |
 | A3 | Create a CA coordination twin for each approved card. CA publishes the community Bluesky post and computes one member-only tally across Harmonica votes and Bluesky likes. | |
 | A4 | Combine topic-specific support with reusable community availability. Show `ready` only when three unique supporters include a three-person overlap; require organizer promotion. | |
-| A5 | Ask Avails to book the best slot and create a high-entropy Jitsi room, then materialize the booking as a CA event and send it to My Community and a Google Calendar connector. | SPIKE |
-| A6 | Have the SIU Meetily connector record the room, transcribe it, report a signed idempotent result to CA, and serve the transcript under a per-session access policy. | SPIKE |
+| A5 | Ask Avails to book the best slot and allocate a high-entropy JaaS room behind a CA join URL. CA issues room-scoped JWTs, consumes idempotent attendance/recording webhooks, materializes the event, and sends it to My Community and Google Calendar. | |
+| A6 | Download the temporary JaaS recording into private SIU storage, have an SIU-owned worker reuse the pinned MIT Meetily import pipeline, report artifact metadata idempotently to CA, and serve the transcript under a per-session access policy. | |
 | A7 | Persist an approved session synthesis and reviewed links in the brain; keep the full transcript private and available to authorized consumers such as Harmonica. | |
 | A8 | Feed approved links through a new CA manual-links seam into scenius-digest and My Community; let follow-up Harmonica sessions consume individual-session or whole-project context. | |
 
@@ -77,15 +77,15 @@ proposed MiroTalk room stack. That room-stack boundary is a spike below.
 | R1 | Similar proposals resolve to one stable topic card without losing contributing conversations or merge lineage. | Must-have | ✅ |
 | R2 | Each approved topic has one live surface at `/u/[slug]` and a Bluesky post; verified members can support it from either surface and linked identities count once. | Must-have | ✅ |
 | R3 | A topic becomes ready when it has at least three unique member supporters and at least one candidate time works for three of those supporters; an organizer must still promote it. | Must-have | ✅ |
-| R4 | Promotion produces a scheduled session with a Jitsi link, calendar invitations, an entry on the shared Google Calendar, and an event in My Community. | Must-have | ❌ |
+| R4 | Promotion produces a scheduled session with a Jitsi link, calendar invitations, an entry on the shared Google Calendar, and an event in My Community. | Must-have | ✅ |
 | R5 | Invited and authenticated attendees can access a private transcript after the session; recording and transcript processing are community infrastructure, not Harmonica infrastructure. | Must-have | ❌ |
 | R6 | The private transcript can inform authorized tools, while an approved public-safe synthesis and resources persist in `unconference-brain/`. | Must-have | ✅ |
 | R7 | Participants can run follow-up Harmonica conversations about one session or the unconference as a whole, with the relevant community sources as context. | Must-have | ✅ |
 | R8 | Public links found verbatim in transcripts can enter the My Community digest after review without exposing private quotes, identities, or transcript content. | Must-have | ✅ |
 
-**Unsolved:** R4 waits on the Jitsi scheduling/attendance spike. R5 waits on
-the Meetily recorder/adapter spike. A flagged mechanism cannot pass its
-requirement until the mechanism is verified.
+**Unsolved:** R5 requires a production decision to replace JaaS recording with a
+community-hosted recorder or explicitly relax that part of the requirement. The
+SIU-hosted transcription and private-access mechanism is now established.
 
 ## Lifecycle
 
@@ -220,12 +220,12 @@ of access, not an implementation detail.
 | N14 | P10 | readiness evaluator | Require 3 unique supporters and one 3-person overlap | call | -> S4 | -> U10, -> U12 |
 | N15 | P10 | CA promotion handler | Claim one organizer promotion and call Avails idempotently | call | -> N16 | - |
 | N16 | P10 | Avails `schedule_call` | Select best slot for supported DIDs and request Jitsi | call | -> N17, -> S8 | -> N15 |
-| N17 | P10 | Avails conferencing | Generate high-entropy Jitsi URL and include it in ICS/result | call | -> S8 | -> N18 |
+| N17 | P10 | Avails conferencing | Allocate a high-entropy JaaS room and include the stable CA join URL in ICS/result | call | -> S8 | -> N18 |
 | N18 | P10 | CA event materializer | Create linked event exactly once from booking result | call | -> S9, -> N20, -> N21 | -> U10, -> U22 |
-| N19 | P10 | Jitsi access/attendance | Verify join identity/consent and emit signed attendance | call/event | -> S10 | -> U17, -> U18 |
+| N19 | P10 | CA JaaS gateway | Check identity/consent, issue room-scoped JWT, and consume authenticated idempotent attendance events | call/event | -> S10 | -> U17, -> U18 |
 | N20 | P10 | CA connector registry | Configure/invoke Google Calendar connector with CA event idempotency key | call | -> S11 | -> U11 |
-| N21 | P10 | CA connector registry | Configure Meetily integration, dispatch recording work, and track retries | call | -> N22, -> S12 | -> U11, -> U13 |
-| N22 | P10 | SIU recorder/Meetily adapter | Record Jitsi, transcribe, and report signed result | call | -> N23, -> S13 | - |
+| N21 | P10 | CA connector registry | Configure the Meetily-derived integration, lease private-media work, and track retries | call | -> N22, -> S12 | -> U11, -> U13 |
+| N22 | P10 | SIU Meetily-derived worker | Persist temporary JaaS media, run the pinned import pipeline, upload normalized artifacts, and report metadata | call | -> N23, -> S13 | - |
 | N23 | P10 | CA transcript callback | Verify connector, deduplicate callback, and set artifact ACL | receive | -> S12, -> S13, -> N24 | -> U13 |
 | N24 | P10 | transcript processor | Produce draft synthesis and extract literal transcript URLs | call | -> S14, -> S15 | -> U14 |
 | N25 | P10 | transcript access gate | Authorize booked invitee or authenticated attendee and issue short-lived URL | call | -> S13 | -> U19 |
@@ -247,7 +247,7 @@ of access, not an implementation detail.
 | S5 | P10 | Bluesky records | Canonical and alias post URIs/CIDs. |
 | S6 | P10 | CA support observations | Harmonica identity votes and Bluesky liker DIDs, resolved at tally time. |
 | S7 | P10 | Avails standing availability | Community-scoped member availability and trust records in member PDSes. |
-| S8 | P10 | Avails booking ledger | Idempotent slot, participants, Jitsi URL, and booking result. |
+| S8 | P10 | Avails booking ledger | Idempotent slot, participants, JaaS room name, stable CA join URL, and booking result. |
 | S9 | P10 | CA events | Scheduled session projected to scenius-digest/My Community. |
 | S10 | P10 | CA session participation ACL | Booked identities and authenticated room attendees. |
 | S11 | P10 | Google Calendar event | Shared calendar event id and update/cancel state. |
@@ -258,10 +258,11 @@ of access, not an implementation detail.
 | S16 | P10 | scenius-digest links | Unified link feed consumed by My Community. |
 | S17 | P10 | Harmonica project sources | Authorized transcript/synthesis context used by follow-up sessions. |
 
-## Provisional Slices
+## Implementation Slices
 
-These boundaries are provisional until the two spikes close and the breadboard
-is rechecked. Each slice ends in visible behavior.
+The detailed slices, acceptance criteria, and repository boundaries are in
+[Unconference Platform - Implementation Slices](./unconference-platform-slices.md).
+The production recorder hold is isolated to V6; the private pilot can proceed.
 
 | # | Slice | Demo |
 |---|---|---|
@@ -276,8 +277,8 @@ is rechecked. Each slice ends in visible behavior.
 
 ## Spikes
 
-- [Jitsi scheduling, identity, attendance, and recording](./spike-jitsi-scheduling-attendance.md)
-- [SIU-hosted Meetily connector contract](./spike-meetily-connector.md)
+- Complete: [Jitsi scheduling, identity, attendance, and recording](./spike-jitsi-scheduling-attendance.md)
+- Complete: [SIU-hosted Meetily connector contract](./spike-meetily-connector.md)
 
 ## Existing Seams To Reuse
 
