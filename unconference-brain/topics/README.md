@@ -2,4 +2,4 @@
 
 # Unconference topics
 
-- [TEST: Portable community trust across the social internet](topics/topic-d215bf17-e391-4712-95c8-1f8b511c1746.md) — retired
+- [TEST: Portable community trust across the social internet](topic-d215bf17-e391-4712-95c8-1f8b511c1746.md) — retired
