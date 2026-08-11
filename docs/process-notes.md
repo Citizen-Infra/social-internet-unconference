@@ -41,3 +41,8 @@
 - **Decisions:** Use Deepgram Nova-3 for pilot prerecorded transcription because it provides a supported API, asynchronous callbacks, word timestamps, utterances, diarization, and speaker confidence. Evaluate hosted Voxtral Mini Transcribe V2 and the exact Apache-2.0 open-weight Voxtral deployment against the same recordings before production. Speaker labels remain recording-local pseudonyms.
 - **State:** Meetily is no longer an infrastructure dependency. The pilot now has two hosted processors, JaaS and Deepgram, so R5 remains failed until production self-hosts both functions or explicitly relaxes the requirement.
 - **Next:** Update implementation issues, run the provider bake-off during V6, and start V1 in Harmonica #659.
+
+## 2026-08-11 — Transcription implementation handoffs updated
+- **Done:** Updated community-admin #135 and SIU tracker #16 to remove the Meetily-derived worker, add the provider-neutral Deepgram adapter, preserve pseudonymous diarization, and include the Voxtral bake-off and expanded R5 production hold.
+- **State:** Planning documents and implementation issues now agree. Meetily appears only in the rejected-option record and historical process notes.
+- **Next:** Start V1 in Harmonica #659; execute the provider bake-off when V6 has consented test recordings.
