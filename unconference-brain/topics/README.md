@@ -2,6 +2,7 @@
 
 # Unconference topics
 
+- [Funding the technologists building the social internet](topic-2c57f9da-6bac-46f3-a389-6a8d82e28fd0.md) — draft
 - [Concrete, exportable outputs as session goals](topic-888b7a59-4456-4f62-aa87-823ab1e63b4a.md) — draft
 - [Federated community governance without centralization](topic-a9b50278-ae94-41a3-b492-0a445f5b380a.md) — draft
 - [TEST: Portable community trust across the social internet](topic-d215bf17-e391-4712-95c8-1f8b511c1746.md) — retired
