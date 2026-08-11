@@ -6,7 +6,7 @@ bluesky_url:
 scheduled_event_id: 
 merged_from: []
 supporter_count: 0
-provenance_count: 3
+provenance_count: 1
 ---
 
 Existing funding mechanisms are fragmented and often inaccessible to builders without the right networks or social capital. What institution could help independent developers discover mechanisms, assess eligibility, become eligible, pool resources, and receive small reliable flows of support? Clarify whether this should be a directory, navigator, fund, cooperative service, or another form. Draft source: candidate territory captured from the 2026-07-21 SIU shaping call; not yet an agreed central theme.

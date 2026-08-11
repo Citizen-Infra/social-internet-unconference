@@ -6,7 +6,7 @@ bluesky_url:
 scheduled_event_id: 
 merged_from: []
 supporter_count: 0
-provenance_count: 3
+provenance_count: 1
 ---
 
 When should independent teams rely on shared protocol infrastructure, and when should they build missing capabilities themselves? Explore cold-start risk, protocol alignment, private community features, permission primitives, and the boundary between common infrastructure and differentiated collaboration software. Draft source: candidate territory captured from the 2026-07-21 SIU shaping call; not yet an agreed central theme.
