@@ -2,11 +2,23 @@
 
 # Unconference topics
 
+- [Community Admin concierge redesign](topic-0c0c0a9e-aac3-4ce7-8e67-944c0abb70a2.md) — draft
+- [Posting on Bluesky to build community vs. the unappealing nature of broadcasting into the void](topic-227469c7-8e0d-4cd3-b463-4392c2793443.md) — draft
+- [What institution or mechanism could help indie developers outside major tech hubs (e.g. in Serbia) actually access and benefit from existing open source funding infrastructure?](topic-28c83a2a-cecb-4b6e-b574-cc420a582b20.md) — draft
 - [Funding the technologists building the social internet](topic-2c57f9da-6bac-46f3-a389-6a8d82e28fd0.md) — approved
 - [What is enough? Reinvestment beyond philanthropy](topic-524e6c20-fedd-4fbe-b212-6c12b301f3ad.md) — approved
+- [Online unconference design and logistics](topic-679d8822-6472-405c-a292-798a6b7785db.md) — draft
+- [Funding models for indie and open-source developers](topic-6d2af661-c1c2-449c-82f7-13ad90dfcd63.md) — draft
+- [Community discovery on Bluesky / AT Protocol](topic-7d9812f5-2c8f-4bbe-9e69-0f92c20bf82d.md) — draft
 - [Concrete, exportable outputs as session goals](topic-888b7a59-4456-4f62-aa87-823ab1e63b4a.md) — retired
+- [AT Protocol vs. ActivityPub strategic prioritisation](topic-99f4efec-fb48-4df4-99bb-d46ee0ca65bf.md) — draft
+- [Philanthropy vs. reinvestment as the right model for successful founders](topic-a20ef8cb-9e6b-4b6c-9325-50bcef17d05b.md) — draft
 - [Federated community governance without centralization](topic-a9b50278-ae94-41a3-b492-0a445f5b380a.md) — draft
 - [The missing funding access institution for independent developers](topic-bc5e754d-02f6-45fa-8ea0-fa60c8d483b5.md) — approved
+- [AI companies sharing profits with open source vs. the deeper problem of their extractive operating model](topic-cf8f54e1-d5cb-496c-a5cb-be57ff6efa27.md) — draft
 - [TEST: Portable community trust across the social internet](topic-d215bf17-e391-4712-95c8-1f8b511c1746.md) — retired
+- [Is there enough interest on both sides — alternative investors and open-web builders — to solve the chicken-and-egg problem of connecting them?](topic-dfa71201-2f0b-4ec2-a37f-6ce3f711794f.md) — draft
 - [Privacy and surveillance risk in community infrastructure](topic-e5648018-d5b0-4d0f-bafe-49bf3b85e51b.md) — draft
+- [NLnet's focus on ActivityPub vs. the strategic importance of AT Protocol](topic-f7a4f8ad-638e-4c4a-8d12-5288a6e16af2.md) — draft
+- [Hacking together custom protocol features vs. aligning with the AT Protocol standard](topic-f85d99e2-fe2b-4883-aab2-1797893c69ff.md) — draft
 - [Build on shared protocols or build the missing product primitives?](topic-fd8badf7-e52f-4bb9-acca-024e5ee0aa93.md) — approved
