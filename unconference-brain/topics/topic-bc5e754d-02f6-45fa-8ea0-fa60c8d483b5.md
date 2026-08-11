@@ -1,6 +1,6 @@
 ---
 id: topic-bc5e754d-02f6-45fa-8ea0-fa60c8d483b5
-status: draft
+status: approved
 title: The missing funding access institution for independent developers
 bluesky_url: 
 scheduled_event_id: 

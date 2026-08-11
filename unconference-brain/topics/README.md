@@ -3,10 +3,10 @@
 # Unconference topics
 
 - [Funding the technologists building the social internet](topic-2c57f9da-6bac-46f3-a389-6a8d82e28fd0.md) — approved
-- [What is enough? Reinvestment beyond philanthropy](topic-524e6c20-fedd-4fbe-b212-6c12b301f3ad.md) — draft
+- [What is enough? Reinvestment beyond philanthropy](topic-524e6c20-fedd-4fbe-b212-6c12b301f3ad.md) — approved
 - [Concrete, exportable outputs as session goals](topic-888b7a59-4456-4f62-aa87-823ab1e63b4a.md) — retired
 - [Federated community governance without centralization](topic-a9b50278-ae94-41a3-b492-0a445f5b380a.md) — draft
-- [The missing funding access institution for independent developers](topic-bc5e754d-02f6-45fa-8ea0-fa60c8d483b5.md) — draft
+- [The missing funding access institution for independent developers](topic-bc5e754d-02f6-45fa-8ea0-fa60c8d483b5.md) — approved
 - [TEST: Portable community trust across the social internet](topic-d215bf17-e391-4712-95c8-1f8b511c1746.md) — retired
 - [Privacy and surveillance risk in community infrastructure](topic-e5648018-d5b0-4d0f-bafe-49bf3b85e51b.md) — draft
-- [Build on shared protocols or build the missing product primitives?](topic-fd8badf7-e52f-4bb9-acca-024e5ee0aa93.md) — draft
+- [Build on shared protocols or build the missing product primitives?](topic-fd8badf7-e52f-4bb9-acca-024e5ee0aa93.md) — approved

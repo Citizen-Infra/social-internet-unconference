@@ -1,6 +1,6 @@
 ---
 id: topic-524e6c20-fedd-4fbe-b212-6c12b301f3ad
-status: draft
+status: approved
 title: What is enough? Reinvestment beyond philanthropy
 bluesky_url: 
 scheduled_event_id: 
