@@ -29,3 +29,9 @@
 - **Decisions:** Infrastructure lands inside the first slice that visibly exercises it rather than as a foundation project. The private JaaS pilot may proceed through V8. V6 carries an explicit production hold until recording moves to community infrastructure or R5 changes.
 - **State:** The shape is ready for per-repository issue breakdown without pretending the production recorder gap is closed.
 - **Next:** Create linked implementation issues for V1-V8 and begin with the Harmonica project/brain round-trip in V1.
+
+## 2026-08-11 — Cross-repository implementation issues opened
+- **Done:** Opened the [cross-repository tracker and SIU transcript-infrastructure issue #16](https://github.com/Citizen-Infra/social-internet-unconference/issues/16), linked to [Harmonica #659](https://github.com/harmonicabot/harmonica-web-app-pro/issues/659), [community-admin #135](https://github.com/Citizen-Infra/community-admin/issues/135), [Avails #178](https://github.com/Citizen-Infra/avails/issues/178), and [scenius-digest #17](https://github.com/zhiganov/scenius-digest/issues/17).
+- **Decisions:** Keep one implementation workstream per owning repository and use SIU #16 for V1-V8 sequence, cross-system dependencies, the Meetily-derived worker, artifact infrastructure, and the production recorder hold.
+- **State:** Shaping, both spikes, slices, and implementation handoffs are published. No implementation slice has started yet.
+- **Next:** Start V1 in Harmonica #659 with the immutable project type and GitHub brain round-trip.
