@@ -6,6 +6,6 @@ bluesky_url:
 scheduled_event_id: 
 merged_from: []
 supporter_count: 0
-provenance_count: 2
+provenance_count: 3
 ---
 
