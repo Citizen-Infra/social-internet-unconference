@@ -76,7 +76,7 @@ pilot eventually changes the proposed MiroTalk main-event room stack.
 |---|---|---|:---:|
 | R0 | Community members can use AI-facilitated conversations to propose unconference topics and sessions before the event. | Core goal | ✅ |
 | R1 | Similar proposals resolve to one stable topic card without losing contributing conversations or merge lineage. | Must-have | ✅ |
-| R2 | Each approved topic has one live surface at `/u/[slug]` and a Bluesky post; verified members can support it from either surface and linked identities count once. | Must-have | ✅ |
+| R2 | Each approved topic has one live surface within the Unconference record at `/p/[slug]` and a Bluesky post; verified members can support it from either surface and linked identities count once. | Must-have | ✅ |
 | R3 | A topic becomes ready when it has at least three unique member supporters and at least one candidate time works for three of those supporters; an organizer must still promote it. | Must-have | ✅ |
 | R4 | Promotion produces a scheduled session with a Jitsi link, calendar invitations, an entry on the shared Google Calendar, and an event in My Community. | Must-have | ✅ |
 | R5 | Invited and authenticated attendees can access a private transcript after the session; recording and transcript processing are community infrastructure, not Harmonica infrastructure. | Must-have | ❌ |
