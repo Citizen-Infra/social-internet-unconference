@@ -40,7 +40,7 @@ The framing is deliberately cross-community: not a CIBC event and not a Roomy ev
 
 Raised by Chris Bland on the town hall: two different things were being discussed as if they were one.
 
-1. **Design** — how an ideal unconference should run, and what platforms and tech could support it. Chris's framing: *"the most human-centered, frictionless, decentralized, unowned, non-data-extractive kind of way."* This stream now has concrete work in it: AT Proto logins on MiroTalk, the direct-to-Streamplace path, and the lobby below.
+1. **Design** — how an ideal unconference should run, and what platforms and tech could support it. Chris's framing: *"the most human-centered, frictionless, decentralized, unowned, non-data-extractive kind of way."* This stream now has concrete questions in it: identity for MiroTalk, a composed Streamplace broadcast path, and the lobby below.
 2. **Organisation** — themes, tracks, people, invitations, logistics.
 
 Artem accepted the distinction but not a split into separate projects: *"it's not two different projects, it's just two different work streams."*
@@ -90,11 +90,11 @@ The strategic reason for the guest list is partnership, not attendance: the even
 Erlend's proposal (2026-07-30) replaces "Streamplace hosts the unconference" with a two-layer stack:
 
 - **Rooms: [MiroTalk SFU](https://github.com/miroslavpejic85/mirotalksfu)**, extended with **AT Proto logins**.
-- **Streaming out: [Streamplace](https://stream.place)** — MiroTalk *"already has a version of this for its own streaming product,"* so the path partly exists.
+- **Streaming out: [Streamplace](https://stream.place)** — hosted Streamplace accepts RTMPS or WHIP, but MiroTalk's documented RTMP support does not compose a conference and publish it to an arbitrary external endpoint. The bridge remains unverified.
 
-**Streamplace is open source and self-hostable**, its API is AT Proto lexicons (`place.stream.*` XRPC, `did:web:stream.place`), identity is already Bluesky handles, and per-instance branding is a first-class lexicon feature. Two consequences: a participant with a Bluesky handle carries **one identity across the whole stack**, and **nobody's permission is required for the technical path** — which turns contacting Eli from a dependency into a relationship worth having on its own merits.
+**Streamplace is open source and presents a self-hosting track**, its API is AT Proto lexicons (`place.stream.*` XRPC, `did:web:stream.place`), and hosted broadcaster identity uses AT Protocol OAuth. That identity authenticates the public broadcaster; it does not automatically give MiroTalk participants one verified identity across both systems. Contacting Eli can be relational rather than a hosted-service dependency, but the technical path still requires a compositor and a verified deployment.
 
-Caveats, because this is not yet verified end to end: the self-hosting guide was not readable when checked (2026-07-31), so nobody has confirmed the install process; and Streamplace is early, small software — a handful of concurrent streams at the time of checking — so it should not be assumed to absorb whatever scale #6 lands on.
+Caveats, because this is not yet verified end to end: the self-hosting installation URL still redirects to the hosted application when checked (2026-08-11), so nobody has confirmed the production install process; Streamplace's hosted flow is public; and its capacity should not be assumed to absorb whatever scale #6 lands on without a load test. The integration contract and gates are captured in [the Streamplace broadcast spike](docs/plans/spike-streamplace-main-event-broadcast.md).
 
 **Alternative to MiroTalk:** [suitenumerique/meet](https://github.com/suitenumerique/meet), which Erlend rated technically comparable but rejected on funding grounds — *"then the sponsorship source is something more nebulous."*
 

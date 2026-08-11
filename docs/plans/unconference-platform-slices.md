@@ -222,3 +222,30 @@ Acceptance:
   storage holds private bodies; Harmonica consumes only authorized sources.
 - Human review gates semantic merges, publication, scheduling, public synthesis,
   and digest links.
+
+## Parallel Main-Event Broadcast Workstream
+
+Streamplace is not a ninth implementation slice. It is a public broadcast
+decision that can proceed in parallel once event format, scale, and public-room
+consent are known. V1-V8 do not depend on it.
+
+**Demo:** With a consented test room, an operator starts a composed broadcast,
+publishes it to hosted Streamplace over RTMPS or WHIP, announces it under an
+SIU-controlled AT Protocol identity, opens the public playback URL from My
+Community, and stops the broadcast without exposing the ingest credential.
+
+Gates:
+
+- Select the main-event room/lobby stack.
+- Prove a MiroTalk room compositor; MiroTalk's documented RTMP server is not an
+  outbound conference compositor.
+- Keep stream keys and bearer tokens outside CA, calendars, logs, source
+  control, and the brain.
+- Require an explicit organizer action and persistent public-broadcast notice.
+- Keep private JaaS sessions disconnected from Streamplace by default.
+- Load-test the event's broadcaster/viewer target and verify operator failover.
+- Validate a pinned self-hosted Streamplace deployment before claiming the
+  broadcast is community-hosted.
+
+Contract and evidence:
+[Streamplace main-event broadcast](./spike-streamplace-main-event-broadcast.md).

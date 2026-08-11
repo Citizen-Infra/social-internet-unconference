@@ -46,3 +46,9 @@
 - **Done:** Updated community-admin #135 and SIU tracker #16 to remove the Meetily-derived worker, add the provider-neutral Deepgram adapter, preserve pseudonymous diarization, and include the Voxtral bake-off and expanded R5 production hold.
 - **State:** Planning documents and implementation issues now agree. Meetily appears only in the rejected-option record and historical process notes.
 - **Next:** Start V1 in Harmonica #659; execute the provider bake-off when V6 has consented test recordings.
+
+## 2026-08-11 — Streamplace main-event broadcast captured
+- **Done:** Verified hosted Streamplace AT Protocol sign-in, RTMPS/WHIP ingest, public announcement flow, and outbound multistreaming. Added a dedicated broadcast spike, linked it from the shape, added a parallel workstream to the slices, and corrected the README's unverified direct-MiroTalk and shared-identity claims.
+- **Decisions:** Streamplace is the candidate public broadcast/discovery layer, not a room, lobby, attendance source, or private artifact store. It remains outside V1-V8. An SIU-controlled broadcaster identity and explicit organizer consent are required; ingest credentials remain secret.
+- **State:** The hosted ingest contract is credible. MiroTalk room composition, operator failover, capacity, and self-hosted Streamplace remain open selection gates.
+- **Next:** Run a consented MiroTalk-to-compositor-to-Streamplace rehearsal after the main-event room and scale decisions.

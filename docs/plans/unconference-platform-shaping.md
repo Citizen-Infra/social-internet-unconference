@@ -13,8 +13,8 @@ The Social Internet Unconference needs a shared workflow for forming an agenda,
 finding times, running sessions, preserving what happened, and carrying useful
 resources and reflections back into the community. No single application owns
 the unconference. Harmonica, community-admin, Avails, My Community, Bluesky,
-Jitsi, the selected transcription provider, Google Calendar, scenius-digest,
-and GitHub each have a bounded role.
+Jitsi, Streamplace, the selected transcription provider, Google Calendar,
+scenius-digest, and GitHub each have a bounded role.
 
 This shape is additive to the event planning in the repository README. It does
 not settle the event name, date, scale, or whether the JaaS scheduled-session
@@ -48,6 +48,7 @@ pilot eventually changes the proposed MiroTalk main-event room stack.
 | Scheduling threshold | Three unique member supporters and one candidate slot shared by three of those supporters. |
 | Scheduling action | Passing the threshold marks a topic `ready`; only an organizer can promote it. |
 | Conferencing | Pilot with JaaS for scheduled sessions. The scheduling request explicitly asks for it; Avails must not silently add Jitsi to unrelated bookings. This does not replace the proposed MiroTalk main-event stack. |
+| Main-event broadcast | Preserve Streamplace as the candidate public broadcast/discovery layer, separate from rooms and private artifacts. Hosted RTMPS/WHIP ingest is verified; MiroTalk composition and self-hosted production remain open gates. |
 | Calendar | A community-hosted Google Calendar connector writes the CA event to the shared calendar idempotently. |
 | Recording and transcription | The pilot uses temporary JaaS file recording, immediate SIU ingestion, and Deepgram Nova-3 behind a provider-neutral SIU adapter. Production evaluates self-hosted Voxtral and still requires community-hosted recording plus transcription, or an explicit R5 change. |
 | Transcript access | Booked invitees have access immediately; authenticated room attendees are added after the session. |
@@ -282,6 +283,7 @@ pilot can proceed.
 - Complete: [Jitsi scheduling, identity, attendance, and recording](./spike-jitsi-scheduling-attendance.md)
 - Rejected: [Meetily server fit](./spike-meetily-rejected.md)
 - Complete: [Transcription provider decision](./spike-transcription-provider.md)
+- Open: [Streamplace main-event broadcast](./spike-streamplace-main-event-broadcast.md)
 
 ## Existing Seams To Reuse
 
@@ -306,7 +308,7 @@ pilot can proceed.
 - Publish raw transcripts or private transcript quotes.
 - Infer URLs that are not literal transcript substrings.
 - Let repository edits trigger external side effects.
-- Replace the event's full synchronous lobby or settle MiroTalk versus Jitsi
-  without the room-stack decision.
+- Implement the event's full synchronous lobby, settle MiroTalk versus Jitsi,
+  or broadcast through Streamplace before the room/compositor gates pass.
 - Build a generic integration marketplace before the transcription and Google
   connectors establish the contract.
