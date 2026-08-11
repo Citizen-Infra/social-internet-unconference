@@ -2,4 +2,7 @@
 
 # Unconference topics
 
+- [Concrete, exportable outputs as session goals](topic-888b7a59-4456-4f62-aa87-823ab1e63b4a.md) — draft
+- [Federated community governance without centralization](topic-a9b50278-ae94-41a3-b492-0a445f5b380a.md) — draft
 - [TEST: Portable community trust across the social internet](topic-d215bf17-e391-4712-95c8-1f8b511c1746.md) — retired
+- [Privacy and surveillance risk in community infrastructure](topic-e5648018-d5b0-4d0f-bafe-49bf3b85e51b.md) — draft
