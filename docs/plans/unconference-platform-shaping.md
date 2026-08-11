@@ -26,7 +26,7 @@ pilot eventually changes the proposed MiroTalk main-event room stack.
 |---|---|---|
 | R0 | Community members can use AI-facilitated conversations to propose unconference topics and sessions before the event. | Core goal |
 | R1 | Similar proposals resolve to one stable topic card without losing contributing conversations or merge lineage. | Must-have |
-| R2 | Each approved topic has one live surface at `/u/[slug]` and a Bluesky post; verified members can support it from either surface and linked identities count once. | Must-have |
+| R2 | Each approved topic has one live surface within the Unconference record at `/p/[slug]` and a Bluesky post; verified members can support it from either surface and linked identities count once. | Must-have |
 | R3 | A topic becomes ready when it has at least three unique member supporters and at least one candidate time works for three of those supporters; an organizer must still promote it. | Must-have |
 | R4 | Promotion produces a scheduled session with a Jitsi link, calendar invitations, an entry on the shared Google Calendar, and an event in My Community. | Must-have |
 | R5 | Invited and authenticated attendees can access a private transcript after the session; recording and transcript processing are community infrastructure, not Harmonica infrastructure. | Must-have |
@@ -38,7 +38,7 @@ pilot eventually changes the proposed MiroTalk main-event room stack.
 
 | Decision | Resolution |
 |---|---|
-| Project type | Add immutable Harmonica project type `unconference` with public route `/u/[slug]`. |
+| Project type | Add immutable Harmonica project type `unconference`, using the existing `/p/[slug]` record route shared with Team OS. |
 | Community binding | Reuse the project's community-admin binding and fail-closed membership gate. |
 | Topic ownership | The `unconference-brain/` directory inside the `social-internet-unconference` repository is canonical. Harmonica may generate/review candidates and hold an operational projection; CA owns the cross-system coordination twin. |
 | Publication review | Exact duplicates may merge automatically. New cards and semantic merge suggestions require organizer review before publication. |
@@ -61,7 +61,7 @@ pilot eventually changes the proposed MiroTalk main-event room stack.
 
 | Part | Mechanism | Flag |
 |---|---|:---:|
-| A1 | Add the Harmonica Unconference project type, `/u/[slug]`, community binding, and GitHub container adapter for `unconference-brain/`. | |
+| A1 | Add the Harmonica Unconference project type, the `/p/[slug]` record surface, community binding, and GitHub container adapter for `unconference-brain/`. | |
 | A2 | Extract explicit proposals after linked Harmonica sessions, reconcile exact matches, put new cards or semantic merge suggestions through organizer review, and write accepted topic meaning and lineage into the brain. | |
 | A3 | Create a CA coordination twin for each approved card. CA publishes the community Bluesky post and computes one member-only tally across Harmonica votes and Bluesky likes. | |
 | A4 | Combine topic-specific support with reusable community availability. Show `ready` only when three unique supporters include a three-person overlap; require organizer promotion. | |
@@ -164,7 +164,7 @@ of access, not an implementation detail.
 |---|---|---|
 | P1 | Unconference Project (Harmonica host) | Configure the project, connect the repository, launch proposal/reflection sessions, and review candidates. |
 | P2 | Facilitated Conversation (Harmonica participant) | Propose or reflect through an AI-facilitated conversation. |
-| P3 | `/u/[slug]` (public surface) | Browse topic cards, support topics, add reusable availability, and follow scheduled sessions. |
+| P3 | `/p/[slug]` (Unconference record surface) | Browse topic cards, support topics, add reusable availability, and follow scheduled sessions. |
 | P4 | Community Operations (CA organizer) | Configure integrations, review status, promote ready topics, and approve public links. |
 | P5 | Standing Availability (Avails member) | Publish reusable community-scoped availability and booking trust. |
 | P6 | Session Room (Jitsi) | Join and participate in a scheduled session with recording notice. |
@@ -270,7 +270,7 @@ pilot can proceed.
 | # | Slice | Demo |
 |---|---|---|
 | V1 | Unconference project and brain | Create an Unconference project, connect the SIU repo, and see a manually created draft topic round-trip through `unconference-brain/`. |
-| V2 | Facilitated topic formation | Complete a proposal conversation, review a candidate, merge/approve it, and see the canonical card on `/u/[slug]`. |
+| V2 | Facilitated topic formation | Complete a proposal conversation, review a candidate, merge/approve it, and see the canonical card in the `/p/[slug]` Unconference record. |
 | V3 | Bluesky and cross-surface support | Approve a card, publish its CIBC test post, support it in Harmonica and Bluesky, and see one member-aware tally. |
 | V4 | Availability readiness | Add reusable availability and see the card move from `needs support` to `needs availability` to `ready` only at 3 supporters plus one 3-person overlap. |
 | V5 | Promotion and distribution | Promote a ready topic and see its chosen time, Jitsi link, CA/My Community event, and shared Google Calendar entry. |

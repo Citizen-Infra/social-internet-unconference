@@ -42,7 +42,7 @@ edits from either side.
 
 | Area | Scope |
 |---|---|
-| Harmonica UI | Add immutable `unconference` project type and `/u/[slug]` shell; expose community and repository setup. |
+| Harmonica UI | Add immutable `unconference` project type and the existing `/p/[slug]` record surface; expose community and repository setup. |
 | Harmonica code | Add the managed-container adapter, topic schema/parser, stable ID allocation, App-commit echo suppression, and human-edit ingestion. |
 | Brain directory | Create `unconference-brain/README.md`, `topics/`, and `sessions/` contracts inside the SIU repository without voter, attendee, or transcript bodies. |
 | Affordances | U1, U2, U24; N1, N2, N8, N9, N26; S1-S3. |
@@ -58,7 +58,7 @@ Acceptance:
 ## V2: Facilitated Topic Formation
 
 **Demo:** Complete one Harmonica proposal conversation, review the extracted
-candidate, approve or merge it, and see one canonical topic card at `/u/[slug]`.
+candidate, approve or merge it, and see the canonical Unconference record at `/p/[slug]`.
 
 | Area | Scope |
 |---|---|
