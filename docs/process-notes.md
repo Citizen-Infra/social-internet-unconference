@@ -35,3 +35,9 @@
 - **Decisions:** Keep one implementation workstream per owning repository and use SIU #16 for V1-V8 sequence, cross-system dependencies, the Meetily-derived worker, artifact infrastructure, and the production recorder hold.
 - **State:** Shaping, both spikes, slices, and implementation handoffs are published. No implementation slice has started yet.
 - **Next:** Start V1 in Harmonica #659 with the immutable project type and GitHub brain round-trip.
+
+## 2026-08-11 — Meetily rejected; Deepgram pilot and Voxtral evaluation selected
+- **Done:** Replaced the proposed Meetily-derived worker with a provider-neutral SIU transcription adapter. Added `spike-transcription-provider.md`, retained a concise rejected-Meetily record, and updated the shape, V6 slice, Jitsi handoff, and production hold.
+- **Decisions:** Use Deepgram Nova-3 for pilot prerecorded transcription because it provides a supported API, asynchronous callbacks, word timestamps, utterances, diarization, and speaker confidence. Evaluate hosted Voxtral Mini Transcribe V2 and the exact Apache-2.0 open-weight Voxtral deployment against the same recordings before production. Speaker labels remain recording-local pseudonyms.
+- **State:** Meetily is no longer an infrastructure dependency. The pilot now has two hosted processors, JaaS and Deepgram, so R5 remains failed until production self-hosts both functions or explicitly relaxes the requirement.
+- **Next:** Update implementation issues, run the provider bake-off during V6, and start V1 in Harmonica #659.

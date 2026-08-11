@@ -156,8 +156,8 @@ CA processes `RECORDING_STARTED`, `RECORDING_ENDED`, and
 by the JaaS recording session ID. The worker must download the pre-authenticated
 URL immediately, verify a non-empty supported media type, calculate a SHA-256
 hash, store the media in private SIU storage, and report that artifact to CA.
-The Meetily spike starts at that private artifact; Meetily does not join JaaS or
-own attendance.
+The transcription-provider path starts at that private artifact; no
+transcription provider joins JaaS or owns attendance.
 
 If ingestion fails, retry from the same event payload with exponential backoff
 and alert before the 24-hour URL expiry. Duplicate upload events must resolve to
@@ -193,9 +193,9 @@ These are production verification, not unresolved architecture:
 
 The spike establishes concrete booking, credential, attendance, recording,
 retry, media handoff, update, and cancellation mechanisms. It closes the Jitsi
-portion of R4. R5 remains open because private media ingestion is only the input
-to the separate Meetily connector spike and the pilot's recorder is hosted by
-8x8 rather than on community infrastructure.
+portion of R4. R5 remains open because the pilot's recorder is hosted by 8x8 and
+its selected transcription provider, Deepgram, is also hosted rather than on
+community infrastructure.
 
 ## Sources
 

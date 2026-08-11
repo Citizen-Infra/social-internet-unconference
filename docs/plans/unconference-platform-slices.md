@@ -4,7 +4,7 @@ shaping: true
 
 # Unconference Platform - Implementation Slices
 
-**Status:** Ready for issue breakdown; production recorder hold applies to V6
+**Status:** Ready for implementation; production hosting hold applies to V6
 **Date:** 2026-08-11
 **Shape:** [Unconference Platform](./unconference-platform-shaping.md)
 
@@ -15,10 +15,10 @@ systems. Infrastructure that has no visible effect is part of the first slice
 that exercises it, not a separate foundation project. Stable IDs and
 idempotency keys are introduced when first needed and reused thereafter.
 
-The JaaS path is approved for the pilot. It does not satisfy the production R5
-requirement that recording infrastructure be community-hosted. V6 may ship to a
-private pilot but cannot be called production-complete until that requirement is
-resolved.
+The JaaS and Deepgram paths are approved for the pilot. They do not satisfy the
+production R5 requirement that recording and transcript processing be
+community-hosted. V6 may ship to a private pilot but cannot be called
+production-complete until that requirement is resolved.
 
 ## Sequence
 
@@ -147,7 +147,7 @@ transcript while another member and a non-member are denied.
 | Area | Scope |
 |---|---|
 | JaaS ingestion | Consume recording events, immediately persist and hash media in SIU storage, and protect the 24-hour source expiry. |
-| Connector | Add kind-specific CA lease/progress/result routes and a single-job SIU worker using the pinned Meetily-derived import pipeline. |
+| Connector | Add kind-specific CA lease/progress/result routes and a provider-neutral SIU adapter using Deepgram Nova-3 for the pilot. |
 | Artifacts | Implement encrypted media/transcript storage, lifecycle deletion, normalized `siu.transcript.v1`, and short-lived single-artifact reads. |
 | Access | Build the CA transcript gate from booked identities and verified `PARTICIPANT_JOINED` observations. |
 | Affordances | U11, U13, U17-U20; N19, N21-N25; S10, S12-S14. |
@@ -155,14 +155,15 @@ transcript while another member and a non-member are denied.
 Acceptance:
 
 - The same recording job cannot produce two transcript artifacts.
-- Input and output hashes, engine version, upstream commit, and model are stored.
-- Speaker fields remain null unless a verified diarization mechanism is added.
+- Input/output hashes, provider request ID, model/version, timing, and cost metadata are stored.
+- Diarized speaker labels remain recording-local pseudonyms unless separate verified attribution is added.
 - CA stores references and ACLs, not media or transcript bodies.
 - Media follows explicit deletion policy and temporary worker files are wiped.
 - The authorization matrix in the demo passes.
 
-**Production hold:** Replace JaaS recording with community-hosted recording or
-explicitly relax R5 before marking this slice production-complete.
+**Production hold:** Replace JaaS recording and Deepgram transcription with
+community-hosted mechanisms, or explicitly relax R5, before marking this slice
+production-complete.
 
 ## V7: Brain And Digest Return
 

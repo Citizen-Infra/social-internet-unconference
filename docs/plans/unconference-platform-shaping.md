@@ -4,7 +4,7 @@ shaping: true
 
 # Unconference Platform - Shaping
 
-**Status:** Selected pilot shape with production recorder decision outstanding
+**Status:** Selected pilot shape with production hosting decisions outstanding
 **Date:** 2026-08-11
 
 ## Context
@@ -13,8 +13,8 @@ The Social Internet Unconference needs a shared workflow for forming an agenda,
 finding times, running sessions, preserving what happened, and carrying useful
 resources and reflections back into the community. No single application owns
 the unconference. Harmonica, community-admin, Avails, My Community, Bluesky,
-Jitsi, Meetily, Google Calendar, scenius-digest, and the GitHub repository each
-have a bounded role.
+Jitsi, the selected transcription provider, Google Calendar, scenius-digest,
+and GitHub each have a bounded role.
 
 This shape is additive to the event planning in the repository README. It does
 not settle the event name, date, scale, or whether the JaaS scheduled-session
@@ -49,7 +49,7 @@ pilot eventually changes the proposed MiroTalk main-event room stack.
 | Scheduling action | Passing the threshold marks a topic `ready`; only an organizer can promote it. |
 | Conferencing | Pilot with JaaS for scheduled sessions. The scheduling request explicitly asks for it; Avails must not silently add Jitsi to unrelated bookings. This does not replace the proposed MiroTalk main-event stack. |
 | Calendar | A community-hosted Google Calendar connector writes the CA event to the shared calendar idempotently. |
-| Recording | The pilot uses temporary JaaS file recording followed by immediate ingestion into SIU storage and an SIU-hosted Meetily adapter. Production R5 still requires a community-hosted recorder or an explicit requirement change. |
+| Recording and transcription | The pilot uses temporary JaaS file recording, immediate SIU ingestion, and Deepgram Nova-3 behind a provider-neutral SIU adapter. Production evaluates self-hosted Voxtral and still requires community-hosted recording plus transcription, or an explicit R5 change. |
 | Transcript access | Booked invitees have access immediately; authenticated room attendees are added after the session. |
 | Transcript storage | Full transcripts remain private community sources. A private repository mirror is optional but cannot enforce per-session access. |
 | Brain authority | `unconference-brain/` is a bidirectional canonical container. Valid human edits flow back through the GitHub App. |
@@ -65,7 +65,7 @@ pilot eventually changes the proposed MiroTalk main-event room stack.
 | A3 | Create a CA coordination twin for each approved card. CA publishes the community Bluesky post and computes one member-only tally across Harmonica votes and Bluesky likes. | |
 | A4 | Combine topic-specific support with reusable community availability. Show `ready` only when three unique supporters include a three-person overlap; require organizer promotion. | |
 | A5 | Ask Avails to book the best slot and allocate a high-entropy JaaS room behind a CA join URL. CA issues room-scoped JWTs, consumes idempotent attendance/recording webhooks, materializes the event, and sends it to My Community and Google Calendar. | |
-| A6 | Download the temporary JaaS recording into private SIU storage, have an SIU-owned worker reuse the pinned MIT Meetily import pipeline, report artifact metadata idempotently to CA, and serve the transcript under a per-session access policy. | |
+| A6 | Download the temporary JaaS recording into private SIU storage, transcribe it through a provider-neutral SIU adapter using Deepgram for the pilot, report artifact metadata idempotently to CA, and serve the normalized transcript under a per-session access policy. | |
 | A7 | Persist an approved session synthesis and reviewed links in the brain; keep the full transcript private and available to authorized consumers such as Harmonica. | |
 | A8 | Feed approved links through a new CA manual-links seam into scenius-digest and My Community; let follow-up Harmonica sessions consume individual-session or whole-project context. | |
 
@@ -83,9 +83,10 @@ pilot eventually changes the proposed MiroTalk main-event room stack.
 | R7 | Participants can run follow-up Harmonica conversations about one session or the unconference as a whole, with the relevant community sources as context. | Must-have | ✅ |
 | R8 | Public links found verbatim in transcripts can enter the My Community digest after review without exposing private quotes, identities, or transcript content. | Must-have | ✅ |
 
-**Unsolved:** R5 requires a production decision to replace JaaS recording with a
-community-hosted recorder or explicitly relax that part of the requirement. The
-SIU-hosted transcription and private-access mechanism is now established.
+**Unsolved:** R5 requires production decisions for both hosted services: replace
+JaaS recording and Deepgram transcription with community-hosted mechanisms, or
+explicitly relax those parts of the requirement. The provider-neutral adapter
+and private-access mechanism are established.
 
 ## Lifecycle
 
@@ -105,7 +106,7 @@ Harmonica proposal conversation
   -> CA event
       -> My Community event feed
       -> shared Google Calendar
-      -> Meetily recording work
+      -> Deepgram transcription work
   -> private transcript
       -> participant access
       -> approved synthesis + links
@@ -147,8 +148,8 @@ hold attendee identities or private transcript text.
 
 ### Transcript Location
 
-The Meetily connector stores the private transcript and media. CA stores the
-artifact URI, hash, processing state, and access list. CA grants short-lived
+SIU storage holds private media and normalized transcripts. CA stores artifact
+IDs, hashes, processing state, and access lists. CA grants short-lived
 access after checking that the caller is a booked invitee or authenticated room
 attendee. If a full transcript is mirrored into a private GitHub repository,
 repository-wide readers will be able to see it; that is an explicit broadening
@@ -185,7 +186,7 @@ of access, not an implementation detail.
 | U8 | P3 | topic card | Support topic | click | -> N10 | - |
 | U9 | P3 | topic card | Add or update availability | click | -> P5 | - |
 | U10 | P3 | topic card | Ready/scheduled state and join link | render/click | -> P6 | - |
-| U11 | P4 | integrations | Meetily and Google Calendar connector status | render/configure | -> N20, -> N21 | - |
+| U11 | P4 | integrations | Transcription provider and Google Calendar connector status | render/configure | -> N20, -> N21 | - |
 | U12 | P4 | topic operations | Promote ready topic | click | -> N15 | - |
 | U13 | P4 | event operations | Recording/transcription status and retry | render/click | -> N21 | - |
 | U14 | P4 | link review | Extracted URL, metadata, and public-safe context | render | - | - |
@@ -224,8 +225,8 @@ of access, not an implementation detail.
 | N18 | P10 | CA event materializer | Create linked event exactly once from booking result | call | -> S9, -> N20, -> N21 | -> U10, -> U22 |
 | N19 | P10 | CA JaaS gateway | Check identity/consent, issue room-scoped JWT, and consume authenticated idempotent attendance events | call/event | -> S10 | -> U17, -> U18 |
 | N20 | P10 | CA connector registry | Configure/invoke Google Calendar connector with CA event idempotency key | call | -> S11 | -> U11 |
-| N21 | P10 | CA connector registry | Configure the Meetily-derived integration, lease private-media work, and track retries | call | -> N22, -> S12 | -> U11, -> U13 |
-| N22 | P10 | SIU Meetily-derived worker | Persist temporary JaaS media, run the pinned import pipeline, upload normalized artifacts, and report metadata | call | -> N23, -> S13 | - |
+| N21 | P10 | CA connector registry | Configure the transcription integration, lease private-media work, and track retries | call | -> N22, -> S12 | -> U11, -> U13 |
+| N22 | P10 | SIU transcription adapter | Submit private JaaS media to Deepgram, normalize diarized results, upload artifacts, and report metadata | call | -> N23, -> S13 | - |
 | N23 | P10 | CA transcript callback | Verify connector, deduplicate callback, and set artifact ACL | receive | -> S12, -> S13, -> N24 | -> U13 |
 | N24 | P10 | transcript processor | Produce draft synthesis and extract literal transcript URLs | call | -> S14, -> S15 | -> U14 |
 | N25 | P10 | transcript access gate | Authorize booked invitee or authenticated attendee and issue short-lived URL | call | -> S13 | -> U19 |
@@ -262,7 +263,8 @@ of access, not an implementation detail.
 
 The detailed slices, acceptance criteria, and repository boundaries are in
 [Unconference Platform - Implementation Slices](./unconference-platform-slices.md).
-The production recorder hold is isolated to V6; the private pilot can proceed.
+The production recording/transcription hold is isolated to V6; the private
+pilot can proceed.
 
 | # | Slice | Demo |
 |---|---|---|
@@ -278,7 +280,8 @@ The production recorder hold is isolated to V6; the private pilot can proceed.
 ## Spikes
 
 - Complete: [Jitsi scheduling, identity, attendance, and recording](./spike-jitsi-scheduling-attendance.md)
-- Complete: [SIU-hosted Meetily connector contract](./spike-meetily-connector.md)
+- Rejected: [Meetily server fit](./spike-meetily-rejected.md)
+- Complete: [Transcription provider decision](./spike-transcription-provider.md)
 
 ## Existing Seams To Reuse
 
@@ -305,5 +308,5 @@ The production recorder hold is isolated to V6; the private pilot can proceed.
 - Let repository edits trigger external side effects.
 - Replace the event's full synchronous lobby or settle MiroTalk versus Jitsi
   without the room-stack decision.
-- Build a generic integration marketplace before the Meetily and Google
+- Build a generic integration marketplace before the transcription and Google
   connectors establish the contract.
