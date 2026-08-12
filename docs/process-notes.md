@@ -56,3 +56,39 @@
 ## 2026-08-11 — Canonical brain directory clarified
 - **Decision:** `unconference-brain/` is a first-class directory inside the `social-internet-unconference` repository, not a separate repository. The SIU repo is a single canonical planning-and-record container; we will not call it a monorepo unless it later contains independently versioned or buildable packages.
 - **Impact:** Harmonica connects the SIU repository and selects the `unconference-brain/` directory as its managed container. V1-V8 references now use this model.
+
+## 2026-08-11 — Atmospheric Groups interoperability pilot scoped
+- **Done:** Opened [SIU #17](https://github.com/Citizen-Infra/social-internet-unconference/issues/17) and Harmonica child issue [HAR-1546](https://linear.app/harmonica-pro/issue/HAR-1546), linked under the existing consume-and-publish direction in [HAR-1423](https://linear.app/harmonica-pro/issue/HAR-1423) and Community Admin's Atmospheric Groups epic [#56](https://github.com/Citizen-Infra/community-admin/issues/56).
+- **Decisions:** Treat SIU as a concrete but non-blocking interoperability pilot. Harmonica consumes portable community identity and membership and publishes public-safe deliberation references; it does not become the identity provider. Community Admin remains the Concierge/permission boundary, and the GitHub brain remains canonical for topic and session meaning. Event attendance, session invitation, agenda participation, and standing community membership are distinct relationships.
+- **State:** The central identity question remains open by design: SIU may be its own DID-bearing group, an event owned by another group, or a collaboration spanning several groups. No unsettled Atmospheric Groups lexicon will be implemented merely to support the current launch.
+- **Next:** After agenda distribution, map the existing Community Admin-specific bridge to the community-DID target and decide the event-versus-community identity model before implementation.
+
+## 2026-08-12 — SIU event identity shape selected
+- **Done:** Added `docs/plans/atmospheric-groups-pilot-shaping.md` and `docs/plans/spike-atmospheric-event-identity.md` for SIU #17.
+- **Decisions:** SIU gets a dedicated event DID. Organizers govern it through scoped, revocable roles; it is not a standing participant community. Anyone can complete the Harmonica proposal flow. Harmonica then points to the SIU Bluesky profile, and a verified follow grants an event-scoped participant relationship whose initial capabilities are proposal support and SIU standing availability. Following does not grant group membership, organizer authority, room entry, or transcript access.
+- **State:** The product model is selected. DID provisioning, follow-grant lifecycle, and the public-safe publication envelope remain flagged protocol mechanics for the spike. The live launch remains independent.
+- **Next:** Complete the protocol spike, update the fit check, then breadboard Shape D before slicing implementation.
+
+## 2026-08-12 — Follow-derived event participation settled
+- **Decision:** Community Admin verifies one participant DID against the SIU DID through unauthenticated `app.bsky.graph.getRelationships`; bulk follower-list reconciliation is unnecessary for the participant path. The resulting event-participant grant is continuously derived with a bounded TTL.
+- **Lifecycle:** Unfollow preserves support and availability evidence but those records stop qualifying for readiness. Either-direction blocks and organizer exclusion deny participation capabilities. Organizer exclusion is a durable tombstone and is not silently reversed by re-follow.
+- **Impact:** The follow-to-participant mechanism now passes the shaping fit check. DID provisioning/custody and the public-safe publication envelope remain open spike work.
+
+## 2026-08-12 — Organizer-controlled event DID bridge selected
+- **Decision:** The SIU Bluesky account DID is the event identity, controlled and recoverable by organizers. For the first pilot, organizers publish proposal posts manually and register their AT URIs/CIDs in Community Admin. Community Admin gets no SIU app password; its current app-password integration grants whole-repo write access and is broader than the target scoped Concierge authority.
+- **Publication:** Proposal posts point to the canonical public agenda/topic. `unconference-brain/` remains authoritative for lifecycle and meaning; outcome replies point to canonical successors, scheduled sessions, or results. No new lexicon or DID-document `#concierge` claim is required for the bridge.
+- **State:** Shape D now passes its fit check. The current bridge is mapped in the protocol spike; breadboarding is next.
+
+## 2026-08-12 — SIU event-participation breadboard completed
+- **Done:** Breadboarded the open Harmonica proposal path, optional Bluesky follow, proposal-like support, Avails authorization, organizer exclusion, and readiness wiring in `docs/plans/atmospheric-groups-pilot-shaping.md`.
+- **Correction:** Removed the earlier cross-surface support assumption from the main platform shape and slices. Harmonica forms proposals; it does not collect V3 support. Support comes from Bluesky liker DIDs with active follower-derived SIU event-participant grants, and Avails uses that same grant for SIU standing availability.
+- **State:** The platform shape, slices, #17 shape, and bridge spike now agree. The next step is to slice the breadboard into the smallest demoable implementation increment.
+
+## 2026-08-12 — Atmospheric Groups pilot sliced
+- **Done:** Added `docs/plans/atmospheric-groups-pilot-slices.md` with three vertical increments: AV1 event DID plus follower-qualified support, AV2 shared grant authorization for Avails, and deferred AV3 portable publication plus scoped Concierge delegation.
+- **Decisions:** AV1 replaces the membership-specific identity portion of platform V3 and must include unfollow, block, and organizer-exclusion behavior in its first demo. AV2 replaces the membership-specific authorization portion of V4. AV3 is standards-dependent and not part of the launch bridge.
+- **Next:** Create per-repository implementation issues or plans for AV1, starting with Community Admin's SIU DID binding, manual post registration, relationship grant, and qualifying tally contract.
+
+## 2026-08-12 — Approval-triggered publication, card support, and session links
+- **Decisions:** Steward approval in Harmonica triggers auto-publication: Harmonica calls a narrow Community Admin publish endpoint, and CA posts from the SIU Bluesky account using its existing per-community app-password pattern (only CA holds the credential; organizers keep account custody; scoped delegation replaces this in AV3). This revises the earlier manual-posting bridge. Topic cards on `/p/[slug]` show the qualifying supporter count with a "Support on Bluesky" deep-link rather than collecting votes inline; inline OAuth likes remain a later option. Scheduled session cards render the stable CA join URL plus an auto-generated Excalidraw whiteboard link (random room id + key in the URL fragment; bearer link, public display intended for this open event).
+- **Impact:** Rippled through `unconference-platform-shaping.md` (R2, decisions, A3/A5, breadboard U8/U10/N7/N18), `unconference-platform-slices.md` (V3/V5), and the Atmospheric Groups pilot shaping, spike, and slices.

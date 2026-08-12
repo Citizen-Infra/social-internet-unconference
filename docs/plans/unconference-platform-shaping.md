@@ -24,10 +24,10 @@ pilot eventually changes the proposed MiroTalk main-event room stack.
 
 | ID | Requirement | Status |
 |---|---|---|
-| R0 | Community members can use AI-facilitated conversations to propose unconference topics and sessions before the event. | Core goal |
+| R0 | Anyone can use an AI-facilitated conversation to propose unconference topics before the event without first joining a community or signing in with Bluesky. | Core goal |
 | R1 | Similar proposals resolve to one stable topic card without losing contributing conversations or merge lineage. | Must-have |
-| R2 | Each approved topic has one live surface within the Unconference record at `/p/[slug]` and a Bluesky post; verified members can support it from either surface and linked identities count once. | Must-have |
-| R3 | A topic becomes ready when it has at least three unique member supporters and at least one candidate time works for three of those supporters; an organizer must still promote it. | Must-have |
+| R2 | Each approved topic has one live card at `/p/[slug]` showing its qualifying supporter count and Bluesky link; steward approval auto-publishes the SIU post, and a DID with an active event-participant grant supports by liking it. | Must-have |
+| R3 | A topic becomes ready when it has at least three unique active event-participant supporters and at least one candidate time works for three of those supporters; an organizer must still promote it. | Must-have |
 | R4 | Promotion produces a scheduled session with a Jitsi link, calendar invitations, an entry on the shared Google Calendar, and an event in My Community. | Must-have |
 | R5 | Invited and authenticated attendees can access a private transcript after the session; recording and transcript processing are community infrastructure, not Harmonica infrastructure. | Must-have |
 | R6 | The private transcript can inform authorized tools, while an approved public-safe synthesis and resources persist in `unconference-brain/`. | Must-have |
@@ -39,13 +39,15 @@ pilot eventually changes the proposed MiroTalk main-event room stack.
 | Decision | Resolution |
 |---|---|
 | Project type | Add immutable Harmonica project type `unconference`, using the existing `/p/[slug]` record route shared with Team OS. |
-| Community binding | Reuse the project's community-admin binding and fail-closed membership gate. |
+| Event binding | Bridge the Harmonica project to Community Admin now; target the organizer-controlled SIU Bluesky account DID as the portable event identity. Proposal conversations stay open, while support and availability use a fail-closed follower-derived event-participant grant. |
 | Topic ownership | The `unconference-brain/` directory inside the `social-internet-unconference` repository is canonical. Harmonica may generate/review candidates and hold an operational projection; CA owns the cross-system coordination twin. |
 | Publication review | Exact duplicates may merge automatically. New cards and semantic merge suggestions require organizer review before publication. |
 | Late merge | Keep the oldest canonical card. Preserve all Bluesky posts as vote sources, deduplicate likers, and redirect retired posts to the canonical card. |
-| Harmonica vote identity | Count a verified Harmonica identity even without Bluesky. CA resolves email and DID votes through linked accounts at tally time. |
-| Availability | Reusable community-scoped Avails. Topic support expresses willingness to attend; members do not repaint the same availability for every topic. |
-| Scheduling threshold | Three unique member supporters and one candidate slot shared by three of those supporters. |
+| Support identity | Harmonica forms proposals but does not collect support in V3. A Bluesky like supplies the supporter DID; CA counts it only while that DID has an active SIU event-participant grant. Topic cards display the qualifying count and deep-link to the post rather than collecting votes inline. |
+| Bluesky publication | On steward approval, Harmonica calls CA's narrow publish endpoint; CA posts from the SIU account using its existing per-community app-password pattern and returns the AT URI/CID, which Harmonica writes into the topic file before mirroring. Only CA holds the credential. Scoped, revocable delegation replaces this bridge later. |
+| Session links | Scheduled session cards render the stable CA join URL and an auto-generated Excalidraw whiteboard link (constructed from a random room id and key in the URL fragment; no account or API call). Whiteboard links are bearer capabilities, so public display means public edit access — intended for this open event. |
+| Availability | Reusable SIU-scoped Avails. Topic support expresses willingness to attend; event participants do not repaint the same availability for every topic. |
+| Scheduling threshold | Three unique active event-participant supporters and one candidate slot shared by three of those supporters. |
 | Scheduling action | Passing the threshold marks a topic `ready`; only an organizer can promote it. |
 | Conferencing | Pilot with JaaS for scheduled sessions. The scheduling request explicitly asks for it; Avails must not silently add Jitsi to unrelated bookings. This does not replace the proposed MiroTalk main-event stack. |
 | Main-event broadcast | Preserve Streamplace as the candidate public broadcast/discovery layer, separate from rooms and private artifacts. Hosted RTMPS/WHIP ingest is verified; MiroTalk composition and self-hosted production remain open gates. |
@@ -63,9 +65,9 @@ pilot eventually changes the proposed MiroTalk main-event room stack.
 |---|---|:---:|
 | A1 | Add the Harmonica Unconference project type, the `/p/[slug]` record surface, community binding, and GitHub container adapter for `unconference-brain/`. | |
 | A2 | Extract explicit proposals after linked Harmonica sessions, reconcile exact matches, put new cards or semantic merge suggestions through organizer review, and write accepted topic meaning and lineage into the brain. | |
-| A3 | Create a CA coordination twin for each approved card. CA publishes the community Bluesky post and computes one member-only tally across Harmonica votes and Bluesky likes. | |
+| A3 | Create a CA coordination twin for each approved card. On approval, Harmonica calls CA's publish endpoint; CA posts from the SIU account, returns the AT URI/CID, and counts liker DIDs whose follower-derived event-participant grant is active. | |
 | A4 | Combine topic-specific support with reusable community availability. Show `ready` only when three unique supporters include a three-person overlap; require organizer promotion. | |
-| A5 | Ask Avails to book the best slot and allocate a high-entropy JaaS room behind a CA join URL. CA issues room-scoped JWTs, consumes idempotent attendance/recording webhooks, materializes the event, and sends it to My Community and Google Calendar. | |
+| A5 | Ask Avails to book the best slot and allocate a high-entropy JaaS room behind a CA join URL. CA issues room-scoped JWTs, consumes idempotent attendance/recording webhooks, materializes the event (generating its Excalidraw whiteboard link), and sends it to My Community and Google Calendar. | |
 | A6 | Download the temporary JaaS recording into private SIU storage, transcribe it through a provider-neutral SIU adapter using Deepgram for the pilot, report artifact metadata idempotently to CA, and serve the normalized transcript under a per-session access policy. | |
 | A7 | Persist an approved session synthesis and reviewed links in the brain; keep the full transcript private and available to authorized consumers such as Harmonica. | |
 | A8 | Feed approved links through a new CA manual-links seam into scenius-digest and My Community; let follow-up Harmonica sessions consume individual-session or whole-project context. | |
@@ -74,10 +76,10 @@ pilot eventually changes the proposed MiroTalk main-event room stack.
 
 | Req | Requirement | Status | A |
 |---|---|---|:---:|
-| R0 | Community members can use AI-facilitated conversations to propose unconference topics and sessions before the event. | Core goal | ✅ |
+| R0 | Anyone can use an AI-facilitated conversation to propose unconference topics before the event without first joining a community or signing in with Bluesky. | Core goal | ✅ |
 | R1 | Similar proposals resolve to one stable topic card without losing contributing conversations or merge lineage. | Must-have | ✅ |
-| R2 | Each approved topic has one live surface within the Unconference record at `/p/[slug]` and a Bluesky post; verified members can support it from either surface and linked identities count once. | Must-have | ✅ |
-| R3 | A topic becomes ready when it has at least three unique member supporters and at least one candidate time works for three of those supporters; an organizer must still promote it. | Must-have | ✅ |
+| R2 | Each approved topic has one live card at `/p/[slug]` showing its qualifying supporter count and Bluesky link; steward approval auto-publishes the SIU post, and a DID with an active event-participant grant supports by liking it. | Must-have | ✅ |
+| R3 | A topic becomes ready when it has at least three unique active event-participant supporters and at least one candidate time works for three of those supporters; an organizer must still promote it. | Must-have | ✅ |
 | R4 | Promotion produces a scheduled session with a Jitsi link, calendar invitations, an entry on the shared Google Calendar, and an event in My Community. | Must-have | ✅ |
 | R5 | Invited and authenticated attendees can access a private transcript after the session; recording and transcript processing are community infrastructure, not Harmonica infrastructure. | Must-have | ❌ |
 | R6 | The private transcript can inform authorized tools, while an approved public-safe synthesis and resources persist in `unconference-brain/`. | Must-have | ✅ |
@@ -99,7 +101,7 @@ Harmonica proposal conversation
   -> Harmonica /u projection
   -> CA coordination twin
   -> Bluesky post + /u card
-  -> member support from either surface
+  -> active SIU follower support through Bluesky likes
   -> reusable Avails coverage
   -> ready (3 supporters + one 3-person overlap)
   -> organizer promotion
@@ -184,9 +186,9 @@ of access, not an implementation detail.
 | U5 | P1 | topic review | Approve, revise, merge, or reject | click | -> N5 | - |
 | U6 | P2 | facilitated chat | Proposal/reflection conversation | respond | -> N3 | - |
 | U7 | P3 | topic card | Canonical topic, support count, provenance count, and status | render | - | - |
-| U8 | P3 | topic card | Support topic | click | -> N10 | - |
+| U8 | P3 | topic card | Qualifying supporter count and "Support on Bluesky" deep-link | render/click | -> Bluesky post (external) | - |
 | U9 | P3 | topic card | Add or update availability | click | -> P5 | - |
-| U10 | P3 | topic card | Ready/scheduled state and join link | render/click | -> P6 | - |
+| U10 | P3 | topic card | Ready/scheduled state, Jitsi join link, and whiteboard link | render/click | -> P6 | - |
 | U11 | P4 | integrations | Transcription provider and Google Calendar connector status | render/configure | -> N20, -> N21 | - |
 | U12 | P4 | topic operations | Promote ready topic | click | -> N15 | - |
 | U13 | P4 | event operations | Recording/transcription status and retry | render/click | -> N21 | - |
@@ -212,18 +214,18 @@ of access, not an implementation detail.
 | N4 | P10 | topic reconciliation | Exact-match merge and semantic merge suggestion | call | -> S3 | -> U4 |
 | N5 | P10 | topic review API | Apply organizer decision | call | -> S3, -> N6, -> N26 | -> U4 |
 | N6 | P10 | CA topic sync | Upsert coordination twin by workspace/card external key | call | -> S4, -> N7 | - |
-| N7 | P10 | CA ATProto service | Publish one Bluesky post or attach a late-merge post alias | call | -> S5 | -> U7 |
+| N7 | P10 | CA Bluesky publisher | Publish the SIU post on approval or attach a late-merge alias; return AT URI/CID | call | -> S5 | -> U7 |
 | N8 | P10 | GitHub webhook | Validate push, suppress App echo, and classify brain changes | receive | -> N9 | - |
 | N9 | P10 | unconference container adapter | Parse valid topic/session changes into pending revisions | call | -> S3 | -> U4 |
-| N10 | P10 | CA topic support API | Record verified Harmonica support identity | call | -> S6 | -> U7 |
-| N11 | P10 | CA Bluesky tally | Fetch liker DIDs from every canonical/alias post | call | -> S6 | -> N12 |
-| N12 | P10 | CA identity-aware tally | Resolve email/DID identities, filter to members, and count once | call | -> N14 | -> U7 |
+| N10 | P10 | CA follow verifier | Point-check liker DID against the SIU DID and apply block/exclusion precedence | call | -> S6 | -> N12 |
+| N11 | P10 | CA Bluesky tally | Fetch liker DIDs from every canonical/alias post | call | -> N10 | -> N12 |
+| N12 | P10 | CA event-participant tally | Count unique liker DIDs with active SIU event-participant grants | call | -> N14 | -> U7 |
 | N13 | P10 | Avails standing availability | Save community-scoped availability record | call | -> S7, -> N14 | -> U16 |
 | N14 | P10 | readiness evaluator | Require 3 unique supporters and one 3-person overlap | call | -> S4 | -> U10, -> U12 |
 | N15 | P10 | CA promotion handler | Claim one organizer promotion and call Avails idempotently | call | -> N16 | - |
 | N16 | P10 | Avails `schedule_call` | Select best slot for supported DIDs and request Jitsi | call | -> N17, -> S8 | -> N15 |
 | N17 | P10 | Avails conferencing | Allocate a high-entropy JaaS room and include the stable CA join URL in ICS/result | call | -> S8 | -> N18 |
-| N18 | P10 | CA event materializer | Create linked event exactly once from booking result | call | -> S9, -> N20, -> N21 | -> U10, -> U22 |
+| N18 | P10 | CA event materializer | Create linked event exactly once from booking result and generate its Excalidraw whiteboard link | call | -> S9, -> N20, -> N21 | -> U10, -> U22 |
 | N19 | P10 | CA JaaS gateway | Check identity/consent, issue room-scoped JWT, and consume authenticated idempotent attendance events | call/event | -> S10 | -> U17, -> U18 |
 | N20 | P10 | CA connector registry | Configure/invoke Google Calendar connector with CA event idempotency key | call | -> S11 | -> U11 |
 | N21 | P10 | CA connector registry | Configure the transcription integration, lease private-media work, and track retries | call | -> N22, -> S12 | -> U11, -> U13 |
@@ -247,7 +249,7 @@ of access, not an implementation detail.
 | S3 | P10 | Unconference topic projection | Operational mirror of canonical wording, revisions, evidence references, and merge lineage held in `unconference-brain/`. |
 | S4 | P10 | CA topic twins | Community, external card key, state, scheduling configuration, and event link. |
 | S5 | P10 | Bluesky records | Canonical and alias post URIs/CIDs. |
-| S6 | P10 | CA support observations | Harmonica identity votes and Bluesky liker DIDs, resolved at tally time. |
+| S6 | P10 | CA support observations and grants | Bluesky liker DIDs, bounded-TTL follow decisions, block state, and durable organizer exclusions. |
 | S7 | P10 | Avails standing availability | Community-scoped member availability and trust records in member PDSes. |
 | S8 | P10 | Avails booking ledger | Idempotent slot, participants, JaaS room name, stable CA join URL, and booking result. |
 | S9 | P10 | CA events | Scheduled session projected to scenius-digest/My Community. |
@@ -271,7 +273,7 @@ pilot can proceed.
 |---|---|---|
 | V1 | Unconference project and brain | Create an Unconference project, connect the SIU repo, and see a manually created draft topic round-trip through `unconference-brain/`. |
 | V2 | Facilitated topic formation | Complete a proposal conversation, review a candidate, merge/approve it, and see the canonical card in the `/p/[slug]` Unconference record. |
-| V3 | Bluesky and cross-surface support | Approve a card, publish its CIBC test post, support it in Harmonica and Bluesky, and see one member-aware tally. |
+| V3 | Bluesky and follower-qualified support | Approve a card, publish its SIU post, follow the SIU profile, like the post, and see one event-participant-aware tally. |
 | V4 | Availability readiness | Add reusable availability and see the card move from `needs support` to `needs availability` to `ready` only at 3 supporters plus one 3-person overlap. |
 | V5 | Promotion and distribution | Promote a ready topic and see its chosen time, Jitsi link, CA/My Community event, and shared Google Calendar entry. |
 | V6 | Private session record | Run a recorded test session and let booked/attending identities open the private transcript while another member is denied. |
@@ -288,7 +290,7 @@ pilot can proceed.
 ## Existing Seams To Reuse
 
 - Harmonica immutable project types and capability registry.
-- Harmonica workspace community binding and community-admin membership oracle.
+- Harmonica workspace community binding and Community Admin oracle, bridged toward an SIU DID event binding.
 - Harmonica GitHub App connection, repository ingestion, mirror commits, webhook
   echo suppression, and human-edit ingestion.
 - Harmonica structured knowledge extraction and memory-style reconciliation.

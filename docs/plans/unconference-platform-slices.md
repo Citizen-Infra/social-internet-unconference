@@ -26,7 +26,7 @@ production-complete until that requirement is resolved.
 |---|---|---|---|
 | V1 | Unconference project and brain round-trip | Harmonica, `social-internet-unconference` repo | - |
 | V2 | Facilitated topic formation and review | Harmonica | V1 |
-| V3 | Bluesky publication and identity-aware support | Harmonica, community-admin | V2 |
+| V3 | Bluesky publication and follower-qualified support | Harmonica, community-admin | V2 |
 | V4 | Reusable availability and readiness | community-admin, Avails, Harmonica | V3 |
 | V5 | Organizer promotion and event distribution | community-admin, Avails, scenius-digest | V4 |
 | V6 | Private recorded session and transcript access | community-admin, SIU connector/infra | V5 |
@@ -76,23 +76,24 @@ Acceptance:
 
 ## V3: Bluesky And Cross-Surface Support
 
-**Demo:** Approve a topic, publish it through the community Bluesky account,
-support it in Harmonica and Bluesky with linked identities, and see one unique
-member tally.
+**Demo:** Approve a topic and see Harmonica trigger CA to publish it from the
+SIU Bluesky account, with the AT URI/CID written back into the topic file.
+Follow the SIU profile, like the post, and see the card's qualifying
+event-participant count rise by one with a deep-link to the post.
 
 | Area | Scope |
 |---|---|
-| CA foundation | Build the minimum topic-twin endpoint and community-bound service authentication exercised by this slice. |
-| Publication | Publish one canonical post per approved topic; retain alias post URIs after late merges. |
-| Support | Record verified Harmonica support, ingest liker DIDs, resolve linked accounts at tally time, and exclude non-members. |
+| CA foundation | Build the minimum topic-twin endpoint, SIU DID binding, and service authentication exercised by this slice. |
+| Publication | On approval, Harmonica calls CA's narrow publish endpoint; CA posts from the SIU account using its existing per-community app-password pattern and returns the AT URI/CID, written into the topic file. Only CA holds the credential. Retain alias post URIs after late merges. |
+| Support | Ingest liker DIDs, point-check each against the SIU DID, cache bounded-TTL event-participant grants, and exclude unfollowed, blocked, or organizer-excluded DIDs. |
 | Affordances | U7, U8; N6, N7, N10-N12; S4-S6. |
 
 Acceptance:
 
-- Replaying topic sync or publication does not create another post.
-- One linked person supporting on both surfaces counts once.
-- A verified member without Bluesky can count through Harmonica.
-- Unlinked or non-member Bluesky likes remain observations but do not count.
+- Replaying approval or the publish call returns the same post URI and never creates a duplicate post, topic twin, or association.
+- One liker DID counts once across canonical and alias posts.
+- Only a liker DID with an active SIU follow-derived event-participant grant counts.
+- Unfollowed, blocked, or organizer-excluded likes remain observations but do not count; an exclusion survives re-follow.
 - A late merge aggregates every alias post without republishing.
 
 ## V4: Availability Readiness
@@ -104,26 +105,28 @@ slot works for three supporters.
 | Area | Scope |
 |---|---|
 | Avails | Expose reusable community-scoped standing availability and overlap evaluation for a supplied supporter set. |
-| CA | Recompute readiness after support, identity-link, membership, or availability changes. |
+| CA | Recompute readiness after support, follow-grant, block/exclusion, or availability changes. |
 | Harmonica | Show counts and readiness reason without exposing individual availability. |
 | Affordances | U7-U9, U16; N12-N14; S4, S6, S7. |
 
 Acceptance:
 
-- Availability is entered once per community, not once per topic.
+- Availability is entered once for SIU, not once per topic.
 - Three supporters with no shared three-person slot are not ready.
-- Removing support, membership, or overlap moves a non-scheduled topic back.
+- Removing support, losing the active event-participant grant, or losing overlap moves a non-scheduled topic back.
 - Readiness never schedules or sends invitations automatically.
 
 ## V5: Promotion And Distribution
 
 **Demo:** An organizer promotes a ready topic and receives one chosen time, CA
-join URL, ICS invitation, CA/My Community event, and shared Google Calendar
-event.
+join URL, auto-generated Excalidraw whiteboard link, ICS invitation, CA/My
+Community event, and shared Google Calendar event; the scheduled card on
+`/p/[slug]` renders the join and whiteboard links.
 
 | Area | Scope |
 |---|---|
 | CA connector foundation | Implement the minimum integration registry, `cai_` auth, status/ping, and Google Calendar work path used here. |
+| Whiteboard | Generate the Excalidraw room link at booking (random room id + key in the URL fragment; no account or API call), store it on the scheduled-session record, and render it with the join URL on the public card. |
 | Avails | Extend `schedule_call` with explicit JaaS conference allocation, stable booking ID, random room name, CA join URL, and replay-safe result. |
 | CA | Claim promotion once, materialize the event, configure JaaS, issue room-scoped JWTs after access/consent checks, and consume attendance webhooks. |
 | Distribution | Project the CA event into My Community and the shared Google Calendar; handle update and cancellation. |
