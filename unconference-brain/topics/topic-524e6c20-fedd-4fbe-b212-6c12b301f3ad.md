@@ -2,7 +2,7 @@
 id: topic-524e6c20-fedd-4fbe-b212-6c12b301f3ad
 status: approved
 title: What is enough? Reinvestment beyond philanthropy
-bluesky_url: 
+bluesky_url: https://bsky.app/profile/did:plc:mzvqnxye3oejamuwmfl4qvou/post/6mg5mu5m5p5yr
 scheduled_event_id: 
 merged_from: []
 supporter_count: 0

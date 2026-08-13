@@ -2,7 +2,7 @@
 id: topic-2c57f9da-6bac-46f3-a389-6a8d82e28fd0
 status: approved
 title: Funding the technologists building the social internet
-bluesky_url: 
+bluesky_url: https://bsky.app/profile/did:plc:mzvqnxye3oejamuwmfl4qvou/post/5lbjj4za5rsiv
 scheduled_event_id: 
 merged_from: []
 supporter_count: 0
