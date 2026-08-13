@@ -121,5 +121,6 @@
 - **Session:** OpenCode `ses_00fe2c0d4fferrMs11kZk5vuBI`.
 - **Verified:** Railway remote MCP is installed and authenticated. Community Admin and Avails production both carry the variables needed for their trusted membership seam (`CA_CONFIG_SECRET` plus Avails' `CA_MEMBERSHIP_URL`); OAuth access exposes variable names, not secret values.
 - **Production state:** Avails' public `/api/communities` response currently contains only `cibc`, so SIU is not yet selectable there. Avails consumes CA memberships; it must not verify Bluesky follows directly.
-- **Tracking:** SIU #17 is the cross-repository checklist. Implementation remains in community-admin#135/#136, avails#102/#178, and HAR-1547.
-- **Next:** Implement community-admin#136 so a verified SIU follow is represented through CA's membership contract, then exercise SIU selection in Avails before readiness/booking work.
+- **Tracking:** SIU #17 is the cross-repository checklist. AV1 implementation remains in community-admin#135 and HAR-1547. Avails#178 owns later readiness; the AV2 event-grant consumer contract still needs implementation planning before assigning it to an Avails issue.
+- **Correction:** Community-admin#136 grants ordinary CA membership from follows and is not an SIU dependency. SIU deliberately uses the separate `event_participants` bridge in community-admin#135 so following grants event-scoped capabilities rather than standing membership. Avails must consume that event grant in AV2, not infer SIU participation from ordinary CA memberships.
+- **Next:** Implement AV1 from the existing plan under community-admin#135, starting with migration 022 and the follow-grant verifier. Configure the SIU service credential only when the publish path is ready for an end-to-end test.
