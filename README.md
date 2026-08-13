@@ -15,6 +15,9 @@ As of 2026-08-13:
 
 - The public agenda is live at
   [app.harmonica.chat/p/social-internet-unconference](https://app.harmonica.chat/p/social-internet-unconference).
+- The organizer-controlled SIU Bluesky profile is live at
+  [@unconference.bsky.social](https://bsky.app/profile/unconference.bsky.social)
+  (`did:plc:mzvqnxye3oejamuwmfl4qvou`).
 - Anyone can use the
   [topic-proposal conversation](https://app.harmonica.chat/chat?s=62e14a98-d554-401d-9566-616c30cc6e83)
   without joining a community or signing in with Bluesky.
@@ -51,7 +54,7 @@ and [issue #5](https://github.com/Citizen-Infra/social-internet-unconference/iss
 - **Browse:** the public agenda is open.
 - **Propose:** anyone can complete an AI-facilitated topic conversation, with a
   maximum of three topics per conversation.
-- **Support (planned):** follow the SIU Bluesky profile and like a proposal
+- **Support (planned):** follow the [SIU Bluesky profile](https://bsky.app/profile/unconference.bsky.social) and like a proposal
   post. Only likes from DIDs with an active event-participant relationship will
   count; unfollows, blocks, and organizer exclusions revoke qualification.
 - **Availability (planned):** event participants will be able to publish
@@ -80,7 +83,8 @@ No single application owns the unconference:
 - **Streamplace** remains a candidate public broadcast/discovery layer. It is
   not the room, lobby, attendance source, or private artifact store.
 
-The selected identity pilot uses an organizer-controlled SIU Bluesky DID with
+The selected identity pilot uses the organizer-controlled SIU Bluesky DID
+`did:plc:mzvqnxye3oejamuwmfl4qvou` (`unconference.bsky.social`) with
 event-scoped relationships. This is a practical bridge toward a portable group
 object, not a claim that SIU already implements a complete Verifiable Trust
 Community or platform-independent group protocol.

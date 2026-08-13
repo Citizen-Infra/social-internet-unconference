@@ -4,7 +4,7 @@ shaping: true
 
 # SIU Atmospheric Groups Pilot - Shaping
 
-**Status:** Shape D selected, breadboarded, and sliced
+**Status:** Shape D selected, event identity provisioned, breadboarded, and sliced
 **Date:** 2026-08-12
 **Tracks:** SIU #17, HAR-1546, community-admin #56
 
@@ -74,6 +74,12 @@ transcript as a permanent community member.
 | D7 | Model invitation, room attendance, transcript access, and organizer authority as separate grants with their own provenance and revocation. | |
 | D8 | Keep private bodies and relationship rosters in the appropriate private or permissioned plane; public records expose only aggregate or non-sensitive references. | |
 | D9 | Treat the event DID bridge as a bounded experiment, not a complete group protocol. After launch, run a behavioral exit test with an independent consumer and record intention, technical substrate, end-of-life path, and effects on community power and dependency. | |
+
+The provisioned identity is
+[`unconference.bsky.social`](https://bsky.app/profile/unconference.bsky.social),
+`did:plc:mzvqnxye3oejamuwmfl4qvou` (created 2026-08-13). The handle may change;
+the DID is the binding key. Community Admin service-account configuration and
+AV1 publication remain outstanding.
 
 ## Fit Check
 
@@ -153,7 +159,7 @@ an exclusion tombstone survives a later re-follow.
 
 | Data or action | Authority / home |
 |---|---|
-| Event identity and public profile | Organizer-controlled SIU Bluesky account DID and public repo |
+| Event identity and public profile | `did:plc:mzvqnxye3oejamuwmfl4qvou` / [`unconference.bsky.social`](https://bsky.app/profile/unconference.bsky.social) and the public SIU repo |
 | Bridge coordination | Community Admin binding to the SIU DID; CA holds the SIU app password under its per-community pattern, with no claimed `#concierge` registration until scoped delegation lands |
 | Topic and session meaning | `unconference-brain/` |
 | Public topic/session/results discovery | CA-published proposal posts (triggered by approval) holding canonical URLs; AT URI/CID written into the topic file; outcome replies link to scheduled sessions or results |

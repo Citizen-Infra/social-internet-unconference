@@ -110,3 +110,16 @@
 - **Focus:** Ask Kaliya to demonstrate arrival, live agenda creation, room movement, notes, operational roles, and exit/export behavior. Capture Keep/Adapt/Avoid/Unknown rather than taking a generic product tour.
 - **Decision boundary:** QiQo is tested prior art, not a selected platform. The walkthrough should end with at most three SIU layout options and one rehearsal recommendation.
 - **Next:** Run the walkthrough, record Kaliya's corrections, then settle the synchronous lobby/room shape in issue #6.
+
+## 2026-08-13 — SIU event identity provisioned
+- **Done:** Created [`unconference.bsky.social`](https://bsky.app/profile/unconference.bsky.social), resolving to `did:plc:mzvqnxye3oejamuwmfl4qvou`. This closes the event-identity provisioning prerequisite in Shape D.
+- **Boundary:** The handle is public discovery; the DID is the stable binding key. For SIU standing availability, Community Admin verifies the Bluesky follow and exposes the resulting scoped relationship through its membership contract; Avails consumes that CA membership and does not check Bluesky directly. CA follow-derived membership is tracked in community-admin#136.
+- **State:** Profile live with no proposal posts yet. Community Admin still needs the account app password under `CA_SERVICE_ACCOUNTS` before AV1 can auto-publish.
+- **Next:** Configure the CA service account securely, then implement and test AV1 publication plus follower-qualified support.
+
+## 2026-08-13 — AV1/AV2 execution checkpoint
+- **Session:** OpenCode `ses_00fe2c0d4fferrMs11kZk5vuBI`.
+- **Verified:** Railway remote MCP is installed and authenticated. Community Admin and Avails production both carry the variables needed for their trusted membership seam (`CA_CONFIG_SECRET` plus Avails' `CA_MEMBERSHIP_URL`); OAuth access exposes variable names, not secret values.
+- **Production state:** Avails' public `/api/communities` response currently contains only `cibc`, so SIU is not yet selectable there. Avails consumes CA memberships; it must not verify Bluesky follows directly.
+- **Tracking:** SIU #17 is the cross-repository checklist. Implementation remains in community-admin#135/#136, avails#102/#178, and HAR-1547.
+- **Next:** Implement community-admin#136 so a verified SIU follow is represented through CA's membership contract, then exercise SIU selection in Avails before readiness/booking work.
