@@ -1,8 +1,8 @@
 # Kaliya Young QiQo Walkthrough Brief
 
-**Prepared:** 2026-08-13  
+**Prepared:** 2026-08-13
 **Purpose:** Use Kaliya's walkthrough of IIW and other online-only
-unconferences to decide SIU's synchronous Open Space layout.  
+unconferences to decide SIU's synchronous Open Space layout.
 **Ask:** Show the participant journey and operating roles, including what
 worked poorly. This is a comparative review, not a request to recommend or sell
 QiQo.
