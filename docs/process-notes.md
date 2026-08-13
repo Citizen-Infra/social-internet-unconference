@@ -98,3 +98,9 @@
 - **Decisions:** Frame SIU around one calling question and invitation, not conference tracks. Treat QiQo as tested online Open Space prior art to review, not a selected platform. Define Atmospheric Groups interoperability behaviorally: SIU must be able to replace or bypass an application while retaining identity, relationships, agenda, approved public records, and collective knowledge. The event DID bridge is a bounded subset of a first-class group object, not proof of a complete Verifiable Trust Community.
 - **Scope:** The calling-question correction affects launch. The independent consumer/exit test and three-layer impact review are post-launch proof and do not block agenda distribution.
 - **Next:** Walk through QiQo layouts with Kaliya; settle the calling question and invitation; run the fresh V2 lifecycle preview; implement AV1; later exercise the exit test before claiming interoperability.
+
+## 2026-08-13 — V2 complete lifecycle validated
+- **Done:** Ran a fresh synthetic participant through the live proposal session with two topics: shaped and confirmed topic one, accepted continuation, shaped and confirmed topic two, declined a third, and received an explicit question-free closing turn. The stored thread became inactive.
+- **Result:** V2's multi-topic lifecycle and finality gate passes. SIU #16 now marks V2 complete.
+- **Residual:** Four of eight assistant turns used duplicate or compound question formulations despite the one-question rule. The stored transcript proves this is not MCP rendering. Exact evidence is recorded on existing Harmonica issue HAR-1217; it is a facilitation-quality defect, not a V2 finality blocker.
+- **Next:** Set the calling question/invitation and distribution channel, then implement AV1 under community-admin#135 and HAR-1547.

@@ -20,8 +20,8 @@ As of 2026-08-13:
   without joining a community or signing in with Bluesky.
 - The Unconference project type, public record, and bidirectional
   `unconference-brain/` round-trip are deployed (V1).
-- Facilitated multi-topic proposal formation and review are deployed; one fresh
-  complete-lifecycle preview remains before V2 is considered validated.
+- Facilitated multi-topic proposal formation and review are deployed and the
+  complete two-topic lifecycle is validated (V2).
 - Bluesky publication and follower-qualified proposal support are planned next
   (V3 / Atmospheric Groups AV1). V4-V8 have not started.
 - The event date, scale, synchronous lobby, main-event room stack, and
