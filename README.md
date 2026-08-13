@@ -25,8 +25,10 @@ As of 2026-08-13:
   `unconference-brain/` round-trip are deployed (V1).
 - Facilitated multi-topic proposal formation and review are deployed and the
   complete two-topic lifecycle is validated (V2).
-- Bluesky publication and follower-qualified proposal support are planned next
-  (V3 / Atmospheric Groups AV1). V4-V8 have not started.
+- Bluesky publication and follower-qualified proposal support are deployed
+  (V3 / Atmospheric Groups AV1): four approved topics publish from the SIU DID,
+  qualifying support counts are live, and republication returns `unchanged`.
+  Avails event-scoped availability (AV2) and V4-V8 have not started.
 - The event date, scale, synchronous lobby, main-event room stack, and
   distribution channel remain open.
 
@@ -54,8 +56,8 @@ and [issue #5](https://github.com/Citizen-Infra/social-internet-unconference/iss
 - **Browse:** the public agenda is open.
 - **Propose:** anyone can complete an AI-facilitated topic conversation, with a
   maximum of three topics per conversation.
-- **Support (planned):** follow the [SIU Bluesky profile](https://bsky.app/profile/unconference.bsky.social) and like a proposal
-  post. Only likes from DIDs with an active event-participant relationship will
+- **Support:** follow the [SIU Bluesky profile](https://bsky.app/profile/unconference.bsky.social) and like a proposal
+  post. Only likes from DIDs with an active event-participant relationship
   count; unfollows, blocks, and organizer exclusions revoke qualification.
 - **Availability (planned):** event participants will be able to publish
   reusable SIU-scoped availability through Avails.
