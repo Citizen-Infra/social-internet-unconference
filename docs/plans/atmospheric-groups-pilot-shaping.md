@@ -33,6 +33,7 @@ transcript as a permanent community member.
 | R6 | Public records contain no private responses, voter identities, availability details, invitations, attendee lists, or transcripts. | Must-have |
 | R7 | The pilot does not block agenda distribution or require an unsettled lexicon in the live launch. | Must-have |
 | R8 | New rights fail closed when follow verification or authorization is unavailable, while existing public agenda access remains available. | Must-have |
+| R9 | Before the pilot is called interoperable, replace or bypass one application while retaining SIU identity, relationships, agenda, approved public records, and collective knowledge. | Post-launch proof |
 
 ## Shapes
 
@@ -72,6 +73,7 @@ transcript as a permanent community member.
 | D6 | On steward approval, Harmonica calls CA's publish endpoint; CA posts from the SIU account and returns the AT URI/CID, written into the topic file before mirroring. Posts link to the canonical agenda/topic; lifecycle and results remain canonical in `unconference-brain/`, with outcome links posted as replies. Scheduled sessions may later use the shared calendar lexicon. | |
 | D7 | Model invitation, room attendance, transcript access, and organizer authority as separate grants with their own provenance and revocation. | |
 | D8 | Keep private bodies and relationship rosters in the appropriate private or permissioned plane; public records expose only aggregate or non-sensitive references. | |
+| D9 | Treat the event DID bridge as a bounded experiment, not a complete group protocol. After launch, run a behavioral exit test with an independent consumer and record intention, technical substrate, end-of-life path, and effects on community power and dependency. | |
 
 ## Fit Check
 
@@ -86,6 +88,7 @@ transcript as a permanent community member.
 | R6 | Public records contain no private responses, voter identities, availability details, invitations, attendee lists, or transcripts. | Must-have | ✅ | ✅ | ❌ | ✅ |
 | R7 | The pilot does not block agenda distribution or require an unsettled lexicon in the live launch. | Must-have | ❌ | ❌ | ❌ | ✅ |
 | R8 | New rights fail closed when follow verification or authorization is unavailable, while existing public agenda access remains available. | Must-have | ✅ | ✅ | ❌ | ✅ |
+| R9 | Before the pilot is called interoperable, replace or bypass one application while retaining SIU identity, relationships, agenda, approved public records, and collective knowledge. | Post-launch proof | ❌ | ❌ | ❌ | ✅ |
 
 **Notes:**
 
@@ -93,6 +96,33 @@ transcript as a permanent community member.
 - B fails R0 and R4 because CIBC, rather than SIU, owns the identity and authority.
 - C has no stable event authority or single publication location and makes rights depend on unrelated sponsor memberships.
 - D is selected and passes the fit check. The linked spike records the bridge contracts and remaining standards follow-ups before breadboarding.
+
+R9 is deliberately non-blocking for agenda distribution. D passes because it
+defines replaceable authority and canonical data placement, but the requirement
+is not complete until the post-launch exit test is actually run.
+
+## Advisor-Informed Evaluation
+
+Kaliya Young's Open Space guidance and Project Weave work sharpen the pilot in
+two ways. First, SIU should form around one calling question and invitation,
+not conventional conference tracks. Second, interoperability is behavioral:
+using several tools is insufficient unless the event can leave one while
+retaining identity, relationships, knowledge, and governance continuity.
+
+Evaluate the exit test across three layers:
+
+1. **Intentions and values:** who governs the identity, knowledge, permissions,
+   financing, and end-of-life decision?
+2. **Design and application:** which interfaces and formats permit another
+   implementation to consume or replace the current tool?
+3. **Systems and relationships:** did deployment increase organizer and
+   participant agency, preserve privacy, and build community capacity rather
+   than dependency?
+
+The SIU Bluesky DID and scoped relationship bridge test only part of a
+first-class group object. Do not describe it as a complete Verifiable Trust
+Community or as proof of portability before R9 is exercised. Full source notes:
+[Kaliya Young Advisor Input](../research/2026-08-13-kaliya-young-advisor-input.md).
 
 ## Selected Participant Journey
 

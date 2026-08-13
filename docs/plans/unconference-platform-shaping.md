@@ -98,7 +98,7 @@ Harmonica proposal conversation
   -> topic candidate
   -> exact merge or organizer review
   -> canonical brain topic
-  -> Harmonica /u projection
+  -> Harmonica /p projection
   -> CA coordination twin
   -> Bluesky post + /u card
   -> active SIU follower support through Bluesky likes
