@@ -104,3 +104,9 @@
 - **Result:** V2's multi-topic lifecycle and finality gate passes. SIU #16 now marks V2 complete.
 - **Residual:** Four of eight assistant turns used duplicate or compound question formulations despite the one-question rule. The stored transcript proves this is not MCP rendering. Exact evidence is recorded on existing Harmonica issue HAR-1217; it is a facilitation-quality defect, not a V2 finality blocker.
 - **Next:** Set the calling question/invitation and distribution channel, then implement AV1 under community-admin#135 and HAR-1547.
+
+## 2026-08-13 — QiQo walkthrough prepared
+- **Done:** Added `docs/research/2026-08-13-qiqo-walkthrough-brief.md`, grounded in QiQo's online-unconference guide, current IIW format, and IIW's QiQo-bound notes process.
+- **Focus:** Ask Kaliya to demonstrate arrival, live agenda creation, room movement, notes, operational roles, and exit/export behavior. Capture Keep/Adapt/Avoid/Unknown rather than taking a generic product tour.
+- **Decision boundary:** QiQo is tested prior art, not a selected platform. The walkthrough should end with at most three SIU layout options and one rehearsal recommendation.
+- **Next:** Run the walkthrough, record Kaliya's corrections, then settle the synchronous lobby/room shape in issue #6.

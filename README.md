@@ -107,6 +107,7 @@ group record in [issue #17](https://github.com/Citizen-Infra/social-internet-unc
 - [`docs/plans/atmospheric-groups-pilot-shaping.md`](docs/plans/atmospheric-groups-pilot-shaping.md) - event-DID and scoped-relationship shape.
 - [`docs/plans/atmospheric-groups-pilot-slices.md`](docs/plans/atmospheric-groups-pilot-slices.md) - AV1-AV3 identity slices.
 - [`docs/research/2026-08-13-kaliya-young-advisor-input.md`](docs/research/2026-08-13-kaliya-young-advisor-input.md) - advisor input, Project Weave comparison, and resulting design implications.
+- [`docs/research/2026-08-13-qiqo-walkthrough-brief.md`](docs/research/2026-08-13-qiqo-walkthrough-brief.md) - decision-focused guide for Kaliya's online Open Space walkthrough.
 
 ## Open Decisions
 
