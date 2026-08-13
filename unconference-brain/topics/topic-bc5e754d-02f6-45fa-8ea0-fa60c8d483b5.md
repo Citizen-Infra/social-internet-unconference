@@ -2,7 +2,7 @@
 id: topic-bc5e754d-02f6-45fa-8ea0-fa60c8d483b5
 status: approved
 title: The missing funding access institution for independent developers
-bluesky_url: https://bsky.app/profile/did:plc:mzvqnxye3oejamuwmfl4qvou/post/2t4lfklpl6rkd
+bluesky_url: https://bsky.app/profile/did:plc:mzvqnxye3oejamuwmfl4qvou/post/3msxn5s3nh525
 scheduled_event_id: 
 merged_from: []
 supporter_count: 0

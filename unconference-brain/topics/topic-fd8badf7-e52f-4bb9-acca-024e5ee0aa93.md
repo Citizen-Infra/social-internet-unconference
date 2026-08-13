@@ -2,7 +2,7 @@
 id: topic-fd8badf7-e52f-4bb9-acca-024e5ee0aa93
 status: approved
 title: Build on shared protocols or build the missing product primitives?
-bluesky_url: https://bsky.app/profile/did:plc:mzvqnxye3oejamuwmfl4qvou/post/4ltcqjvttxuep
+bluesky_url: https://bsky.app/profile/did:plc:mzvqnxye3oejamuwmfl4qvou/post/3msxn5ro44e2f
 scheduled_event_id: 
 merged_from: []
 supporter_count: 0
