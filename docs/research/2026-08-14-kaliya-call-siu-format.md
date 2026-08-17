@@ -7,9 +7,9 @@
 ## Sources
 
 - Call, 2026-08-14, ~80 minutes. Fathom recording `173441321`.
-- Speakers: Artem Zhiganov; **Kaliya Young** (Identity Woman, IIW); **Kevin Triplett** (Project Weave, left after ~20 min); **Tracy Kunkler**, facilitator; **Nicolas Gimenez** (Agora); **Zicklag** (Rumi).
-- Fathom's invitee list records "Tracey Rogers Brandt" where the transcript speaker is Tracy Kunkler. Unresolved whether these are the same person; quotes below are attributed as the transcript labels them.
-- **ASR note:** the transcript renders QiQo Chat as "Kiko Chat" throughout. Corrected here against `2026-08-13-qiqo-walkthrough-brief.md`. The founder's name as transcribed is not corroborated by any other source and has been left out rather than guessed at.
+- Speakers: Artem Zhiganov; **Kaliya Young** (Identity Woman, IIW); **Kevin Triplett** (Project Weave, left after ~20 min); **Tracy Kunkler**, governance guide; **Nicolas Gimenez** (Agora); **Zicklag** (Roomy).
+- Tracy Kunkler is an existing CIBC collaborator (`cibc-brain/accounts/collaborators/tracy-kunkler/`, prior call 2026-07-29). Fathom's invitee list records "Tracey Rogers Brandt", a name that appears in no other record anywhere; treated as a calendar-invite artefact rather than a second person.
+- **ASR notes, both corrected here including inside quotes.** The transcript renders **QiQo Chat** as "Kiko Chat" (see `2026-08-13-qiqo-walkthrough-brief.md`) and **Roomy** as "Rumi" — a known artifact documented since July, since Roomy is a CIBC partner (`cibc-brain/accounts/partners/roomy/`). The QiQo founder's name as transcribed is corroborated nowhere and has been left out rather than guessed at.
 
 Quotes are verbatim from the transcript. Claims about how IIW operates are Kaliya's account of it, not independently verified.
 
@@ -102,3 +102,5 @@ Its own identity model is email by design. Adoption candidate rather than compet
 ## Also raised, filed elsewhere
 
 ATProto and identity material went to `Citizen-Infra/avails#77`: permissioned data landing as mostly a separate protocol with an alpha expected before end of 2026; DID PLC centralisation described as "not dismissible", with `did:web` as mitigation; First Person Project as Kaliya's stack recommendation. Project Weave pilot-pod question went to `Citizen-Infra/cibc-brain#36`.
+
+Kaliya also offered an intro to **Ben at J-Link Labs** (main programmer on Lemmy) to help Roomy accept First Person Project identities. Unactioned.
