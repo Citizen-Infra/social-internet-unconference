@@ -9,4 +9,4 @@ supporter_count: 0
 provenance_count: 1
 ---
 
-Both sessions contribute to shaping the unconference: the proposal session produced six confirmed topics and recruitment assignments, while the Erlend-Artem session generated actions around async coordination (Rumi space), platform exploration (Stream Place conversation with Eli), and community seeding (inviting AT Proto Science and MetGov-adjacent people).
+Both sessions contribute to shaping the unconference: the proposal session produced six confirmed topics and recruitment assignments, while the Erlend-Artem session generated actions around async coordination (Roomy space), platform exploration (Stream Place conversation with Eli), and community seeding (inviting AT Proto Science and MetGov-adjacent people).

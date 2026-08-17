@@ -9,4 +9,4 @@ supporter_count: 0
 provenance_count: 1
 ---
 
-Concrete planning around an online unconference — using Stream Place, async discussion in Rumi, and inviting AT Proto Science and MetGov-adjacent people — represents the project's primary near-term community-building action.
+Concrete planning around an online unconference — using Stream Place, async discussion in Roomy, and inviting AT Proto Science and MetGov-adjacent people — represents the project's primary near-term community-building action.
