@@ -165,4 +165,5 @@
 - **Implementation:** [Community Admin PR #143](https://github.com/Citizen-Infra/community-admin/pull/143) supplies only active proposal-supporter DIDs to Avails' `evaluate_availability_overlap`, stores aggregate readiness, and exposes `needs-support`, `needs-availability`, or `ready` without calling `schedule_call`.
 - **Failure behavior:** Missing configuration, malformed results, and Avails outages cannot leave a topic ready; no booking, email, invitation, poll, or calendar side effect is available on this path.
 - **Verification:** Syntax and diff checks passed; focused database-backed tests were added but remain for CI because the local checkout has no installed server dependencies.
-- **Next:** Review and merge Community Admin PR #143.
+- **Merged:** PR #143 passed `server`, `admin`, and `clients` CI and was squash-merged as `7b5e2dc6c69c6acbd5f694a47b5930444954a463`.
+- **Next:** Confirm Community Admin and Avails deployment state and production configuration before validating SIU writes, revocation, restoration, and shared three-person overlap.
