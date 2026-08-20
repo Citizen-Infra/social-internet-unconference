@@ -144,3 +144,11 @@
 - **Next:** Implement Community Admin's event-grant introspection and shared freshness semantics.
 - **Next:** Implement Avails' SIU event-scoped standing-availability write gate.
 - **Next:** Implement Avails' read-only three-supporter overlap readiness operation without automatic scheduling.
+
+## 2026-08-20 — AV2 implementation opened for review
+- **Community Admin:** [PR #142](https://github.com/Citizen-Infra/community-admin/pull/142) adds stable event-DID bindings, capability-specific online introspection, shared five-minute grant freshness, immediate exclusion, and fail-closed support behavior.
+- **Avails:** [PR #179](https://github.com/Citizen-Infra/avails/pull/179) adds `ca-event` records, online write authorization, the SIU participant editor, and service-only read-only three-person overlap. `schedule_call` rejects event scopes.
+- **Verification:** Avails passed 58 focused dependency-free tests, syntax checks, diff checks, and the UI detector. Community Admin passed syntax and diff checks. Dependency-backed Community Admin tests, Avails Express route integration, and the Avails client build remain for CI because neither checkout had installed dependencies and none were installed for this task.
+- **State:** PRs are the stopping point. Community Admin must deploy before Avails enables the consumer path.
+- **Next:** Review and merge Community Admin PR #142.
+- **Next:** Review and merge Avails PR #179 after confirming its producer dependency and SIU editor path.

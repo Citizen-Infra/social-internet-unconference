@@ -1,6 +1,6 @@
 # SIU AV2 Event-Grant Consumer Contract
 
-**Status:** Approved 2026-08-20; ready for implementation
+**Status:** Approved 2026-08-20; implementation in Community Admin PR #142 and Avails PR #179
 **Date:** 2026-08-20
 **Event DID:** `did:plc:mzvqnxye3oejamuwmfl4qvou`
 **Producer:** Community Admin
