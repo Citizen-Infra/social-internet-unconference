@@ -5,34 +5,44 @@
 - [Restorative Moderation Across Federated Communities – confirmed proposal](topic-023adf22-22c5-4fe8-9522-09c0a34c19b5.md) — draft
 - [Useful institutional memory vs. surveillance risk](topic-052a3df3-d049-4333-95e3-947f1d7d0931.md) — draft
 - [Community Admin concierge redesign](topic-0c0c0a9e-aac3-4ce7-8e67-944c0abb70a2.md) — draft
+- [Funding access for indie open-web builders](topic-10699df4-889f-4eee-8740-707d512b7855.md) — draft
 - [Durable Community Memory Without Surveillance – confirmed proposal](topic-1456b2fb-fc32-4157-9743-5ac2475b5ec3.md) — draft
-- [Community-Owned Recommendation Feeds session confirmed](topic-20e319c3-5123-45d3-aad2-bf3196683102.md) — draft
+- [Durable community memory vs. privacy and surveillance](topic-14a79138-0e14-4bcb-9f18-1c39c25c470f.md) — draft
+- [Community-Owned Recommendation Feeds session confirmed](topic-20e319c3-5123-45d3-aad2-bf3196683102.md) — approved
 - [Posting on Bluesky to build community vs. the unappealing nature of broadcasting into the void](topic-227469c7-8e0d-4cd3-b463-4392c2793443.md) — pending_revision
-- [Durable Community Memory Without Surveillance session confirmed](topic-284fd043-a83d-4605-927e-58e2e0f0e777.md) — draft
-- [Portable Community Identity session confirmed](topic-28a244b5-acb3-4735-aa74-a942810b27ea.md) — draft
+- [Durable Community Memory Without Surveillance session confirmed](topic-284fd043-a83d-4605-927e-58e2e0f0e777.md) — approved
+- [Portable Community Identity session confirmed](topic-28a244b5-acb3-4735-aa74-a942810b27ea.md) — approved
 - [What institution or mechanism could help indie developers outside major tech hubs (e.g. in Serbia) actually access and benefit from existing open source funding infrastructure?](topic-28c83a2a-cecb-4b6e-b574-cc420a582b20.md) — draft
 - [Funding the technologists building the social internet](topic-2c57f9da-6bac-46f3-a389-6a8d82e28fd0.md) — approved
 - [Community discovery and onboarding friction](topic-306c7a60-04c2-4160-8504-602447802738.md) — draft
 - [Funding access and navigation friction for indie open-web builders](topic-33dd2fc6-09f8-4136-b767-50ef10081558.md) — draft
+- [Online Open Space design patterns session confirmed](topic-3efda633-21ae-4c80-839d-634d9589f30f.md) — draft
 - [Open-source funding infrastructure exists in theory vs. inaccessible in practice for indie builders](topic-46341523-260b-4c04-b667-4afba1a841bd.md) — draft
+- [One participant initially attempted to introduce a private moderation dispute and confidential link into a public proposal session.](topic-478d6643-c395-45aa-a0f7-e357a73f54c1.md) — draft
 - [What is the single biggest friction point for indie ATProto builders in accessing, qualifying for, and benefiting from open-source funding?](topic-49fefce8-e601-43ae-905f-59b5a37b2d73.md) — draft
 - [Restorative Moderation Across Federated Communities session confirmed](topic-4c40621f-88e4-4f13-9e2d-d86f72716745.md) — draft
 - [Community governance and transparency](topic-4cf22285-dcce-48b1-8eb2-e9b0c519a703.md) — draft
+- [Funding access and navigation friction for indie ATProto builders outside major tech hubs](topic-4db7838d-91e0-42c8-83a2-231a3353f6fa.md) — draft
 - [Governance and sovereignty tensions in federated communities](topic-51b7b9b9-056d-47ca-9116-9f734413d8ce.md) — draft
 - [What is enough? Reinvestment beyond philanthropy](topic-524e6c20-fedd-4fbe-b212-6c12b301f3ad.md) — approved
+- [A fourth proposal was submitted but the session limit of three per participant was enforced, leaving it uncaptured.](topic-58e0910f-b9a9-4ce8-9b51-94b61dc94119.md) — draft
 - [Online unconference design and logistics](topic-679d8822-6472-405c-a292-798a6b7785db.md) — draft
 - [Funding models for indie and open-source developers](topic-6d2af661-c1c2-449c-82f7-13ad90dfcd63.md) — draft
 - [Funding access for indie ATProto builders – confirmed proposal](topic-7031fdad-7401-478b-93f3-ad6a33613901.md) — draft
 - [Upstreaming requirement vs. builder cash-flow risk in ATProto funding model](topic-7039a459-e719-4375-bd3f-f3fd7aba533e.md) — draft
 - [Healthy Transparent Governance of Social Platforms session confirmed](topic-763e1d0d-7d05-4cb5-80cb-b509a13c58e3.md) — draft
+- [Extractive models in the open-source economy](topic-7a289f7c-7cc6-49b6-8465-f4c8730af6d8.md) — draft
 - [Community discovery on Bluesky / AT Protocol](topic-7d9812f5-2c8f-4bbe-9e69-0f92c20bf82d.md) — draft
 - [Portable and federated identity across communities](topic-80a4d5c8-84cc-42e3-91df-939b55a7080b.md) — draft
+- [Collective memory without surveillance session confirmed](topic-879eb96a-56cb-4efe-b88c-111f9d48b6ad.md) — draft
 - [Concrete, exportable outputs as session goals](topic-888b7a59-4456-4f62-aa87-823ab1e63b4a.md) — retired
 - [AT Protocol / Bluesky as community and infrastructure layer](topic-90c86b04-4e90-4b88-99f4-6cfc7491915f.md) — draft
 - [How should communities distinguish useful institutional memory from permanent behavioral dossiers, and what threat models apply?](topic-9166e78e-5d09-4ce0-977c-f23bd4cb38c8.md) — draft
 - [Open-source funding access and equity](topic-99e92aea-0258-4945-af53-e61f26255b90.md) — draft
 - [AT Protocol vs. ActivityPub strategic prioritisation](topic-99f4efec-fb48-4df4-99bb-d46ee0ca65bf.md) — draft
 - [What specific consent and revocation controls do people need for portable identity claims to be trustworthy and safe?](topic-9b6bce7b-71d9-423a-8393-afd413d0021a.md) — draft
+- [Funding access for indie ATProto builders session confirmed](topic-9bf287b2-768f-4864-b94a-b7c6fd56b864.md) — draft
+- [Restorative Moderation session confirmed](topic-9d624539-ee47-4bd7-addc-edac354a3d30.md) — draft
 - [Who carries the financial risk during the gap between a builder delivering sponsored ATProto work and it being formally accepted upstream?](topic-a0eed518-17e6-4248-acc7-7d7b3149b76b.md) — draft
 - [Open-web funding models and financial risk](topic-a194d864-f5d1-4ca3-8ae1-5a496601bca0.md) — draft
 - [Philanthropy vs. reinvestment as the right model for successful founders](topic-a20ef8cb-9e6b-4b6c-9325-50bcef17d05b.md) — pending_revision
@@ -44,15 +54,19 @@
 - [NLnet's ActivityPub focus vs. the strategic importance of AT Protocol](topic-bca139c2-bdeb-47a4-8e7e-1614c2356aeb.md) — draft
 - [Portable Community Identity – confirmed proposal](topic-bd15b0e8-2bdf-4a39-9770-f35854f7a697.md) — draft
 - [Private dispute details excluded from proposal](topic-c3f0b067-1462-4791-9bda-e5e8bcfb3dca.md) — draft
+- [Moderation and conflict resolution in federated communities](topic-c8fc20ba-0b1a-44b3-af93-6b6df13e449c.md) — draft
 - [Online unconference design and platform](topic-cc9da532-a5ed-4c5e-803f-2d8663c99ec3.md) — draft
 - [AI companies sharing profits with open source vs. the deeper problem of their extractive operating model](topic-cf8f54e1-d5cb-496c-a5cb-be57ff6efa27.md) — pending_revision
 - [Portability of identity vs. local community sovereignty](topic-d03c66d8-6eab-4905-b1c0-aed9ed695b1b.md) — draft
 - [Mediation in Online Communities – confirmed proposal](topic-d06fe542-91ce-4fc3-b20b-148f7cb7feec.md) — draft
 - [Coordination across federated communities vs. preservation of local moderation authority](topic-d0c8c67f-10a2-4894-91f8-7a0daacc00e1.md) — draft
 - [TEST: Portable community trust across the social internet](topic-d215bf17-e391-4712-95c8-1f8b511c1746.md) — retired
+- [AT Protocol vs. ActivityPub strategic prioritization](topic-d67a7442-db32-474e-96bb-23d0739f24c0.md) — draft
 - [Is there enough interest on both sides — alternative investors and open-web builders — to solve the chicken-and-egg problem of connecting them?](topic-dfa71201-2f0b-4ec2-a37f-6ce3f711794f.md) — draft
 - [Privacy and surveillance risk in community infrastructure](topic-e5648018-d5b0-4d0f-bafe-49bf3b85e51b.md) — draft
 - [Extractive vs. reciprocal models in tech](topic-eb4c83d8-7b54-434f-be1d-b06539a3f7f5.md) — draft
+- [Mediation in Online Communities session confirmed](topic-ecce24cb-58b6-4b4c-93ff-e177d47e6713.md) — draft
+- [What would it take for an indie ATProto developer outside a major tech hub to discover, qualify for, and actually benefit from existing open-source funding infrastructure?](topic-f0b5e48e-70f8-48b3-9f53-2136699f689c.md) — draft
 - [Useful institutional memory vs. surveillance and privacy risk](topic-f2aa0193-5306-4432-af6d-9149965350ee.md) — draft
 - [NLnet's focus on ActivityPub vs. the strategic importance of AT Protocol](topic-f7a4f8ad-638e-4c4a-8d12-5288a6e16af2.md) — pending_revision
 - [Hacking together custom protocol features vs. aligning with the AT Protocol standard](topic-f85d99e2-fe2b-4883-aab2-1797893c69ff.md) — pending_revision
