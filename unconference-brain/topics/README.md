@@ -8,10 +8,10 @@
 - [Funding access for indie open-web builders](topic-10699df4-889f-4eee-8740-707d512b7855.md) — draft
 - [Durable Community Memory Without Surveillance – confirmed proposal](topic-1456b2fb-fc32-4157-9743-5ac2475b5ec3.md) — retired
 - [Durable community memory vs. privacy and surveillance](topic-14a79138-0e14-4bcb-9f18-1c39c25c470f.md) — draft
-- [Community-Owned Recommendation Feeds session confirmed](topic-20e319c3-5123-45d3-aad2-bf3196683102.md) — approved
+- [Community-Owned Recommendation Feeds](topic-20e319c3-5123-45d3-aad2-bf3196683102.md) — approved
 - [Posting on Bluesky to build community vs. the unappealing nature of broadcasting into the void](topic-227469c7-8e0d-4cd3-b463-4392c2793443.md) — pending_revision
-- [Durable Community Memory Without Surveillance session confirmed](topic-284fd043-a83d-4605-927e-58e2e0f0e777.md) — approved
-- [Portable Community Identity session confirmed](topic-28a244b5-acb3-4735-aa74-a942810b27ea.md) — approved
+- [Durable Community Memory Without Surveillance](topic-284fd043-a83d-4605-927e-58e2e0f0e777.md) — approved
+- [Portable Community Identity](topic-28a244b5-acb3-4735-aa74-a942810b27ea.md) — approved
 - [What institution or mechanism could help indie developers outside major tech hubs (e.g. in Serbia) actually access and benefit from existing open source funding infrastructure?](topic-28c83a2a-cecb-4b6e-b574-cc420a582b20.md) — draft
 - [Funding the technologists building the social internet](topic-2c57f9da-6bac-46f3-a389-6a8d82e28fd0.md) — approved
 - [Community discovery and onboarding friction](topic-306c7a60-04c2-4160-8504-602447802738.md) — draft
@@ -68,8 +68,8 @@
 - [Mediation in Online Communities session confirmed](topic-ecce24cb-58b6-4b4c-93ff-e177d47e6713.md) — draft
 - [What would it take for an indie ATProto developer outside a major tech hub to discover, qualify for, and actually benefit from existing open-source funding infrastructure?](topic-f0b5e48e-70f8-48b3-9f53-2136699f689c.md) — draft
 - [Useful institutional memory vs. surveillance and privacy risk](topic-f2aa0193-5306-4432-af6d-9149965350ee.md) — retired
-- [NLnet's focus on ActivityPub vs. the strategic importance of AT Protocol](topic-f7a4f8ad-638e-4c4a-8d12-5288a6e16af2.md) — pending_revision
-- [Hacking together custom protocol features vs. aligning with the AT Protocol standard](topic-f85d99e2-fe2b-4883-aab2-1797893c69ff.md) — pending_revision
+- [NLnet's focus on ActivityPub vs. the strategic importance of AT Protocol](topic-f7a4f8ad-638e-4c4a-8d12-5288a6e16af2.md) — approved
+- [Hacking together custom protocol features vs. aligning with the AT Protocol standard](topic-f85d99e2-fe2b-4883-aab2-1797893c69ff.md) — approved
 - [Online unconference design and community bootstrapping](topic-f8973e2d-4ebb-4239-b25d-6ee0bd92b0d6.md) — draft
 - [ATProto upstreaming requirement vs. builder cash-flow risk](topic-f8ad1565-ec37-41cd-939c-87359c1cddac.md) — draft
 - [Community-Owned Recommendation Feeds – confirmed proposal](topic-fc31c86f-5630-462d-aae8-04f410071c52.md) — retired
