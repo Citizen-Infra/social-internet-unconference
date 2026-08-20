@@ -152,3 +152,10 @@
 - **State:** PRs are the stopping point. Community Admin must deploy before Avails enables the consumer path.
 - **Next:** Review and merge Community Admin PR #142.
 - **Next:** Review and merge Avails PR #179 after confirming its producer dependency and SIU editor path.
+
+## 2026-08-20 — AV2 implementation merged
+- **Community Admin:** PR #142 merged as `a86c8c20202f18113bc2f3080027248707133c5f`; all `server`, `admin`, and `clients` CI checks passed.
+- **Avails:** PR #179 merged as `0ac73f55930cfe99285abcd15a856c023c4f30f8`; the `build` CI check passed.
+- **Review state:** Both PRs were clean with no review threads or requested changes. They were squash-merged in producer-then-consumer order.
+- **State:** AV2 code is merged. Deployment monitoring and production validation were not requested.
+- **Next:** Implement Community Admin's readiness orchestration: supply only active proposal-supporter DIDs to Avails' read-only overlap operation and project aggregate readiness without automatic scheduling.
