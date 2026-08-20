@@ -299,8 +299,10 @@ pilot can proceed.
 - CA event storage and `/api/events/manual` projection into scenius-digest.
 - CA integrations/connectors design (`cai_` integration-bound tokens); the
   registry is designed but not yet built.
-- Avails community-scoped standing availability, voter-DID booking,
-  idempotency ledger, ICS generation, and interactive Google Calendar support.
+- Avails participant-owned standing availability, typed scopes, voter-DID
+  resolution, idempotency ledger, ICS generation, and interactive Google Calendar
+  support. SIU adds an event-DID scope and read-only readiness operation under the
+  [AV2 event-grant consumer contract](./siu-av2-event-grant-consumer-contract.md).
 - scenius-digest private-community filtering and My Community links/events APIs.
 
 ## Explicit Non-Goals For V1

@@ -109,11 +109,17 @@ qualifying and moves an unscheduled topic back.
 Acceptance:
 
 - Avails and proposal tally consume the same Community Admin grant semantics; neither performs an independent Bluesky follow check.
-- Availability is scoped to the SIU DID and entered once, not once per topic.
+- Availability uses `{ type: "ca-event", value: <SIU DID> }` and is entered once, not once per topic or local Community Admin ID.
+- Every event-scoped availability write uses Community Admin's online, capability-specific introspection contract and fails closed when an active grant cannot be established.
 - A lost grant stops availability from qualifying but does not delete the participant's record.
 - Three active supporters without a shared three-person slot are not ready.
-- Readiness changes never schedule or invite automatically.
+- Readiness uses Avails' read-only overlap operation; it never calls `schedule_call`, creates calendar artifacts, sends email, schedules, or invites automatically.
 - Individual availability and participant identity are not exposed on the public agenda.
+
+The exact payload, TTL, expiry, revocation, failure, scope, and privacy behavior is
+defined in the proposed
+[AV2 event-grant consumer contract](./siu-av2-event-grant-consumer-contract.md).
+Implementation remains blocked until that contract is reviewed.
 
 ## AV3: Portable Publication And Concierge Delegation
 

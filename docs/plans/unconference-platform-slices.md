@@ -98,13 +98,13 @@ Acceptance:
 
 ## V4: Availability Readiness
 
-**Demo:** Three supporters publish reusable community availability and the topic
+**Demo:** Three supporters publish reusable SIU event availability and the topic
 moves through `needs support`, `needs availability`, and `ready` only when one
 slot works for three supporters.
 
 | Area | Scope |
 |---|---|
-| Avails | Expose reusable community-scoped standing availability and overlap evaluation for a supplied supporter set. |
+| Avails | Expose event-scoped standing availability keyed by the SIU DID and a read-only overlap evaluation for a supplied active-supporter set. Consume Community Admin's event grant; never infer it from Bluesky. |
 | CA | Recompute readiness after support, follow-grant, block/exclusion, or availability changes. |
 | Harmonica | Show counts and readiness reason without exposing individual availability. |
 | Affordances | U7-U9, U16; N12-N14; S4, S6, S7. |
@@ -114,7 +114,8 @@ Acceptance:
 - Availability is entered once for SIU, not once per topic.
 - Three supporters with no shared three-person slot are not ready.
 - Removing support, losing the active event-participant grant, or losing overlap moves a non-scheduled topic back.
-- Readiness never schedules or sends invitations automatically.
+- Readiness never calls `schedule_call`, schedules, creates calendar artifacts, or sends invitations automatically.
+- The exact producer/consumer boundary must follow the approved [AV2 event-grant consumer contract](./siu-av2-event-grant-consumer-contract.md).
 
 ## V5: Promotion And Distribution
 

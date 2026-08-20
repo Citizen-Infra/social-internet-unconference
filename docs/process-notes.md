@@ -130,3 +130,10 @@
 - **Decisions:** The critical-mass problem (#24's 50-person floor), the invite list (#5) and co-organisers (#7) are one problem — 50 people cannot come from one person's network, so co-organisers *are* the attendance answer. Topic-record fixes applied to the Harmonica DB as well as the files, since `detail` is the round-trip source.
 - **State:** Clean and pushed. Every remaining bad-name grep hit sits inside a correction footer, verified.
 - **Next:** The recording-norm question (#23) is still unanswered and bounds what SIU captures. Robin has not been asked anything yet.
+
+## 2026-08-20 — AV2 producer/consumer contract shaped
+- **Done:** Traced the shipped Community Admin event-grant producer and Avails' current standing-availability, `ca-community`, and booking paths. Added `docs/plans/siu-av2-event-grant-consumer-contract.md` with the exact introspection payload, event-DID scope, five-minute source TTL, fail-closed behavior, revocation semantics, and no-Bluesky-query invariant.
+- **Decisions proposed for review:** Add a distinct `ca-event` scope keyed by the SIU DID; introspect Community Admin on every event-scoped write; retain but stop qualifying records after grant loss; and add a read-only three-person overlap operation rather than reuse side-effecting `schedule_call`.
+- **Privacy consequence:** Current Avails records live publicly in each participant's PDS. The public SIU agenda would expose aggregates only, but AV2 cannot claim the underlying record is private. Review must accept explicit disclosure or select a larger private-storage shape.
+- **State:** No AV2 implementation has started. The contract's review gates must close first.
+- **Next:** Review the six gates in the AV2 contract, then create the Community Admin and Avails implementation handoffs without collapsing standing availability and supporter-overlap readiness into one action.

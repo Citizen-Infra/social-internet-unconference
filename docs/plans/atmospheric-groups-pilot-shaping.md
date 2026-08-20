@@ -26,7 +26,7 @@ transcript as a permanent community member.
 |---|---|---|
 | R0 | Give SIU a portable identity and public record that can outlive any one application or Concierge. | Core goal |
 | R1 | Anyone can participate in the Harmonica topic-proposal session without first joining a community or using Bluesky. | Must-have |
-| R2 | The Harmonica closing flow points to the SIU Bluesky profile; a verified follower can support proposals and add community-scoped standing availability. | Must-have |
+| R2 | The Harmonica closing flow points to the SIU Bluesky profile; a verified follower can support proposals and add event-scoped standing availability. | Must-have |
 | R3 | Following creates an event-participant relationship, not standing community membership, organizer authority, room admission, or transcript access. | Must-have |
 | R4 | Organizers govern the SIU identity and grant Harmonica, Community Admin, and other applications only scoped, revocable authority. | Must-have |
 | R5 | `unconference-brain/` remains canonical for topic and session meaning; protocol records are public-safe references and discovery artifacts. | Must-have |
@@ -87,7 +87,7 @@ AV1 publication remain outstanding.
 |---|---|---|:---:|:---:|:---:|:---:|
 | R0 | Give SIU a portable identity and public record that can outlive any one application or Concierge. | Core goal | ✅ | ❌ | ❌ | ✅ |
 | R1 | Anyone can participate in the Harmonica topic-proposal session without first joining a community or using Bluesky. | Must-have | ❌ | ❌ | ✅ | ✅ |
-| R2 | The Harmonica closing flow points to the SIU Bluesky profile; a verified follower can support proposals and add community-scoped standing availability. | Must-have | ✅ | ❌ | ❌ | ✅ |
+| R2 | The Harmonica closing flow points to the SIU Bluesky profile; a verified follower can support proposals and add event-scoped standing availability. | Must-have | ✅ | ❌ | ❌ | ✅ |
 | R3 | Following creates an event-participant relationship, not standing community membership, organizer authority, room admission, or transcript access. | Must-have | ❌ | ✅ | ❌ | ✅ |
 | R4 | Organizers govern the SIU identity and grant Harmonica, Community Admin, and other applications only scoped, revocable authority. | Must-have | ✅ | ❌ | ❌ | ✅ |
 | R5 | `unconference-brain/` remains canonical for topic and session meaning; protocol records are public-safe references and discovery artifacts. | Must-have | ✅ | ✅ | ❌ | ✅ |
@@ -171,11 +171,11 @@ an exclusion tombstone survives a later re-follow.
 
 ## Next
 
-Plan and implement AV1 from `atmospheric-groups-pilot-slices.md` as the identity
-portion of SIU platform V3. It is a bridge rehearsal: no new lexicon and no
-DID-document mutation; the only service credential is CA's existing
-per-community app-password pattern, held solely by CA and replaced by scoped
-delegation in AV3.
+Review the explicit
+[AV2 event-grant consumer contract](./siu-av2-event-grant-consumer-contract.md),
+including its public-PDS privacy consequence, before implementing AV2. The bridge
+uses no unsettled shared group lexicon or DID-document mutation; scoped delegation
+still replaces CA's app-password publication authority in AV3.
 
 ## Breadboard
 
