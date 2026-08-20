@@ -166,4 +166,9 @@
 - **Failure behavior:** Missing configuration, malformed results, and Avails outages cannot leave a topic ready; no booking, email, invitation, poll, or calendar side effect is available on this path.
 - **Verification:** Syntax and diff checks passed; focused database-backed tests were added but remain for CI because the local checkout has no installed server dependencies.
 - **Merged:** PR #143 passed `server`, `admin`, and `clients` CI and was squash-merged as `7b5e2dc6c69c6acbd5f694a47b5930444954a463`.
+- **Correction:** This merge completes the Community Admin caller and aggregate storage, not the full readiness projection. Harmonica must still render `needs support`, `needs availability`, or `ready` without exposing supporter identities or individual windows.
+- **Next:** Implement the Harmonica aggregate readiness projection.
 - **Next:** Confirm Community Admin and Avails deployment state and production configuration before validating SIU writes, revocation, restoration, and shared three-person overlap.
+- **Next:** Run HAR-1545's retrospective audit of SIU PRs #660-664 and their combined behavior on current `main`.
+- **Next:** Resolve SIU #8's reflection timing, session closure, and synthesis publication design.
+- **Next:** Complete the deferred AV3 proof with an independent consumer, application replacement, and scoped Concierge delegation.
