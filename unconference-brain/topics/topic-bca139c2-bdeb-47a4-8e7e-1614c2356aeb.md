@@ -1,6 +1,6 @@
 ---
 id: topic-bca139c2-bdeb-47a4-8e7e-1614c2356aeb
-status: draft
+status: retired
 title: NLnet's ActivityPub focus vs. the strategic importance of AT Protocol
 bluesky_url: 
 scheduled_event_id: 

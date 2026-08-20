@@ -1,6 +1,6 @@
 ---
 id: topic-cc9da532-a5ed-4c5e-803f-2d8663c99ec3
-status: draft
+status: retired
 title: Online unconference design and platform
 bluesky_url: 
 scheduled_event_id: 
