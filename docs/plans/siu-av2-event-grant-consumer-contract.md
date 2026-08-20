@@ -162,6 +162,10 @@ Community Admin supplies only current proposal liker DIDs whose event grant is
 active in the same evaluation pass. Avails reads only those participants' PDS
 records matching the exact `ca-event` scope and returns aggregate overlap:
 
+Until SIU has a fixed event date, the approved readiness window is the next 56
+calendar days and the candidate session duration is 60 minutes. This rolling
+window matches Avails' default standing-availability lifetime.
+
 ```json
 {
   "ready": true,

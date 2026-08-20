@@ -159,3 +159,10 @@
 - **Review state:** Both PRs were clean with no review threads or requested changes. They were squash-merged in producer-then-consumer order.
 - **State:** AV2 code is merged. Deployment monitoring and production validation were not requested.
 - **Next:** Implement Community Admin's readiness orchestration: supply only active proposal-supporter DIDs to Avails' read-only overlap operation and project aggregate readiness without automatic scheduling.
+
+## 2026-08-20 — AV2 readiness orchestration opened for review
+- **Decision:** While SIU has no fixed date, evaluate 60-minute sessions over the next 56 calendar days, matching Avails' default standing-availability lifetime.
+- **Implementation:** [Community Admin PR #143](https://github.com/Citizen-Infra/community-admin/pull/143) supplies only active proposal-supporter DIDs to Avails' `evaluate_availability_overlap`, stores aggregate readiness, and exposes `needs-support`, `needs-availability`, or `ready` without calling `schedule_call`.
+- **Failure behavior:** Missing configuration, malformed results, and Avails outages cannot leave a topic ready; no booking, email, invitation, poll, or calendar side effect is available on this path.
+- **Verification:** Syntax and diff checks passed; focused database-backed tests were added but remain for CI because the local checkout has no installed server dependencies.
+- **Next:** Review and merge Community Admin PR #143.
