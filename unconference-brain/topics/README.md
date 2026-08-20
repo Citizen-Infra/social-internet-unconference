@@ -61,7 +61,7 @@
 - [Mediation in Online Communities – confirmed proposal](topic-d06fe542-91ce-4fc3-b20b-148f7cb7feec.md) — draft
 - [Coordination across federated communities vs. preservation of local moderation authority](topic-d0c8c67f-10a2-4894-91f8-7a0daacc00e1.md) — draft
 - [TEST: Portable community trust across the social internet](topic-d215bf17-e391-4712-95c8-1f8b511c1746.md) — retired
-- [AT Protocol vs. ActivityPub strategic prioritization](topic-d67a7442-db32-474e-96bb-23d0739f24c0.md) — draft
+- [AT Protocol vs. ActivityPub strategic prioritization](topic-d67a7442-db32-474e-96bb-23d0739f24c0.md) — retired
 - [Is there enough interest on both sides — alternative investors and open-web builders — to solve the chicken-and-egg problem of connecting them?](topic-dfa71201-2f0b-4ec2-a37f-6ce3f711794f.md) — draft
 - [Privacy and surveillance risk in community infrastructure](topic-e5648018-d5b0-4d0f-bafe-49bf3b85e51b.md) — draft
 - [Extractive vs. reciprocal models in tech](topic-eb4c83d8-7b54-434f-be1d-b06539a3f7f5.md) — draft
