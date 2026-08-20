@@ -117,9 +117,9 @@ Acceptance:
 - Individual availability and participant identity are not exposed on the public agenda.
 
 The exact payload, TTL, expiry, revocation, failure, scope, and privacy behavior is
-defined in the proposed
+defined in the approved
 [AV2 event-grant consumer contract](./siu-av2-event-grant-consumer-contract.md).
-Implementation remains blocked until that contract is reviewed.
+Implementation is now unblocked.
 
 ## AV3: Portable Publication And Concierge Delegation
 

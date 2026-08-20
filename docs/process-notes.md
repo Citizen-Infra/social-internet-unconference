@@ -137,3 +137,10 @@
 - **Privacy consequence:** Current Avails records live publicly in each participant's PDS. The public SIU agenda would expose aggregates only, but AV2 cannot claim the underlying record is private. Review must accept explicit disclosure or select a larger private-storage shape.
 - **State:** No AV2 implementation has started. The contract's review gates must close first.
 - **Next:** Review the six gates in the AV2 contract, then create the Community Admin and Avails implementation handoffs without collapsing standing availability and supporter-overlap readiness into one action.
+
+## 2026-08-20 — AV2 contract approved
+- **Decision:** Approved all six contract gates: `ca-event` keyed by SIU DID, five-minute source TTL, online fail-closed introspection, immediate exclusion with retained participant records, read-only three-person overlap, and participant-owned public PDS availability with explicit disclosure.
+- **State:** AV2 implementation is unblocked. Community Admin producer work and Avails consumer/readiness work remain separate implementation actions.
+- **Next:** Implement Community Admin's event-grant introspection and shared freshness semantics.
+- **Next:** Implement Avails' SIU event-scoped standing-availability write gate.
+- **Next:** Implement Avails' read-only three-supporter overlap readiness operation without automatic scheduling.

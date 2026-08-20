@@ -1,6 +1,6 @@
 # SIU AV2 Event-Grant Consumer Contract
 
-**Status:** Proposed for review; implementation is blocked until approved
+**Status:** Approved 2026-08-20; ready for implementation
 **Date:** 2026-08-20
 **Event DID:** `did:plc:mzvqnxye3oejamuwmfl4qvou`
 **Producer:** Community Admin
@@ -190,7 +190,7 @@ component that interprets a Bluesky follow or block as an SIU grant.
 Tests must fail if an event path reaches Avails' Bluesky-list resolver or if a
 Community Admin outage falls through to a graph lookup or permissive write.
 
-## Privacy Consequence For Review
+## Approved Privacy Consequence
 
 Avails currently stores standing availability in the participant's PDS, where the
 record is public to anyone who already knows the DID and collection. AV2 keeps
@@ -198,13 +198,13 @@ that participant-owned storage model and adds clear UI disclosure; the SIU agend
 exposes only aggregate readiness. This satisfies the AV2 slice's public-agenda
 boundary, but it does not make individual availability globally private.
 
-If SIU requires the availability record itself to be private, AV2 needs a larger
-storage and revocation shape rather than this bridge contract. That decision must
-be made during review; implementation must not imply that PDS records are private.
+SIU approved this bridge with explicit disclosure on 2026-08-20. If SIU later
+requires the availability record itself to be private, that needs a larger storage
+and revocation shape. Implementation must not imply that PDS records are private.
 
-## Review Gates
+## Approved Review Gates
 
-Implementation may start only after reviewers confirm:
+Approved together on 2026-08-20:
 
 - `ca-event` plus the event DID is the correct stable scope;
 - five minutes is the accepted maximum unfollow/block detection delay;
