@@ -185,3 +185,22 @@
 - **Next:** Answer #3's calling question, now blocking the invitation.
 - **Next:** Choose the #17 shape — invisible pilot or drop from SIU.
 - **Next:** Design the AV2 no-ATProto fallback before more AV2 work lands.
+
+## 2026-08-24 — Tracy Kunkler session processed, three days late
+- **Source:** 2026-08-21, ~90 min with Tracy Kunkler and Graham, captured by Graham's ChatGPT notetaker. No Fathom or Fireflies record exists. The transcript had been sitting **untracked in this public repo's working tree** since 08-22; moved to `cibc-brain/docs/research/2026-08-21-tracy-kunkler-open-space-walkthrough.md`, which is where raw call material belongs.
+- **Consent:** given by everyone. Agreed before Graham started recording, so it is absent from the transcript. A first pass read the tape alone and recorded Tracy as not consenting, which was accurate about the transcript and wrong about the call. A recording cannot testify to what happened before it started.
+- **Headline:** Artem stated a real convening purpose and said outright it is not what he told Kaliya. He and Erlend both want to know how open source developers fund themselves without venture capital. Tracy turned it into a theme in about a minute — how do we resource ourselves when we tell the venture capitalists no — and proposed philanthropists and developers in one room under a no-pitching, nobody-asks-for-money ground rule. Commented to #3. This closes the gap #25 named.
+- **Second headline:** Tracy suggested letting go of the unconference format for now, and testing standing availability through CIBC's existing town hall as a community of practice instead. Purpose drives process; a community of practice reaches the Avails experiment without 50 strangers or a five-hour block. Not yet filed as its own issue.
+- **Decisions supported, none taken:**
+  - **#19 / #13** — the agenda chaos is a feature, and Tracy's constraint is narrow and testable: software may propose merges and moves, the named proposer decides. Two facilitators independently on the same point now.
+  - **#7** — the diffusion problem has a prescription. A core team of about five, committed to each other, recruited *after* the purpose is sharp. Artem said plainly that his WhatsApp and Signal groups are silent and he is not sure the event will happen.
+  - **#24** — Alaska alliance runs this at 90 minutes every other month, down from two hours. Artem argued against his own five-hour option. The middle option costs the Avails test.
+  - **#23** — notetakers generally cannot join breakout rooms. The norm question and the capability question have to be settled together. Session notes in a per-room doc are a separate mechanism that needs no recording.
+  - **#26** — the facilitator role is "unfacilitated"; session hosts are not experts; butterflies need a hallway space built or the role has nowhere to happen; the law of mobility needs scripting in the opening.
+  - **#1** — Graham finds "unconference" uninviting on two counts: it reads as lesser, and it still signals conference-scale commitment.
+- **Precedent worth keeping:** Ben Roberts' hybrid dialogue inquiry is a prior failure of SIU's async model — survey, eight topics, eight WhatsApp chats, nobody talked. Artem's diagnosis was that people did not know each other. It is also where he and Graham met.
+- **Not for this repo:** Graham does not understand how Harmonica works and wants Polis-like functionality for his team of five or six. A positioning finding for the Harmonica side.
+- **State:** Extraction committed and pushed to cibc-brain. Comments on #3, #7, #19, #24, #23, #26, #1. No code changed, no issue closed.
+- **Next:** Sharpen #3's purpose into a six-word question, since #7 depends on it.
+- **Next:** Decide whether the community-of-practice route replaces or precedes the unconference.
+- **Next:** Verify whether any candidate platform can put a notetaker inside a breakout room.
