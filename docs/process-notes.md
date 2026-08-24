@@ -172,3 +172,16 @@
 - **Next:** Run HAR-1545's retrospective audit of SIU PRs #660-664 and their combined behavior on current `main`.
 - **Next:** Resolve SIU #8's reflection timing, session closure, and synthesis publication design.
 - **Next:** Complete the deferred AV3 proof with an independent consumer, application replacement, and scoped Concierge delegation.
+
+## 2026-08-24 — SIU is a neutral container (#25 answered and closed)
+- **Decision:** SIU convenes the ATProto and social-internet ecosystem, not CIBC. It produces no commitments of its own; harvest is a book of proceedings; CIBC's job is to hold the space. Kaliya's IIW phrasing applies: "it's not our job." Chosen against the recommendation on file, which argued that #17 and the AV2 investment already made it CIBC convening for itself.
+- **Three consequences, all now open:**
+  - **#17 conflicts as written.** Using the event as CIBC's Atmospheric Groups interoperability pilot puts a CIBC objective inside a container just declared neutral. Two viable shapes: an invisible pilot that asks nothing of participants, or drop it from SIU and test on a CIBC-only gathering. Asking participants to adopt CIBC tooling so the pilot has data is not viable.
+  - **Attendance cannot require CIBC's stack (#13).** AV2 requires an ATProto identity, a Community Admin event grant keyed by the SIU DID, and an Avails standing-availability record. A neutral container needs a path in for someone with none of those, and AV2 has no such fallback. PRs #142, #179 and #143 all assume the grant path, so retrofitting gets more expensive with each layer.
+  - **The convening purpose is now blocking (#3).** #25 already recorded that Artem's honest motivation is "not yet a convening purpose." A gathering for itself can run on the convenor's motivation; a neutral container cannot. #3 must be answered before any invitation goes out.
+- **Downstream:** #8 narrows to session notes and proceedings — cross-session synthesis, action items and owners are out of scope, and "synthesis publication" should be redesigned as proceedings publication. #1 and #3 should both read as an ecosystem invitation. #26 unchanged; neutrality is not a licence to modify open space.
+- **Easier under this choice:** the 50-person floor (#24), because "come to the ecosystem's event" recruits better than "come to CIBC's"; co-organisers (#7) become genuine co-hosts; professional facilitation is worth more, since holding a neutral space is the skill.
+- **State:** #25 closed. Comments left on #17, #13 and #8. No code changed.
+- **Next:** Answer #3's calling question, now blocking the invitation.
+- **Next:** Choose the #17 shape — invisible pilot or drop from SIU.
+- **Next:** Design the AV2 no-ATProto fallback before more AV2 work lands.
