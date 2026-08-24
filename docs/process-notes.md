@@ -204,3 +204,10 @@
 - **Next:** Sharpen #3's purpose into a six-word question, since #7 depends on it.
 - **Next:** Decide whether the community-of-practice route replaces or precedes the unconference.
 - **Next:** Verify whether any candidate platform can put a notetaker inside a breakout room.
+
+## 2026-08-24 — Tracey Rogers Brandt is a real person; the 08-16 name sweep merged two people
+- **What was wrong:** the 2026-08-16 correction sweep recorded "Tracey Rogers Brandt" as a Fathom invitee-list artefact "appearing in no other record" and treated her as Tracy Kunkler. Artem was asked and confirmed "same person", which is now read as confirming the *speaker*, not the identity.
+- **What is true:** Tracey Rogers Brandt is at **Circular Patterns**, El Cerrito California, and appears alongside **She's Geeky** — the unconference Kaliya Young founded. She sits in Kaliya's network. She was genuinely invited to the 2026-08-14 call and did not speak. The speaker is **Tracy Kunkler** of Circle Forward, `tracy@circleforward.us`. Two people.
+- **Why it was missed:** "appears in no other record" was true of the local archives and nobody searched outside them. A single web search settled it. **Absence from our own files is not evidence a person does not exist** — it is evidence we have never recorded them.
+- **Corrected in:** both brains, the SIU research capture, the Pro extraction file, and this note.
+- **Next:** correct the SIU issues where the 08-16 sweep applied the merge (#18, #19, #23, #13, #7).
