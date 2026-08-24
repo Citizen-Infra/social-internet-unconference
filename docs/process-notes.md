@@ -211,3 +211,13 @@
 - **Why it was missed:** "appears in no other record" was true of the local archives and nobody searched outside them. A single web search settled it. **Absence from our own files is not evidence a person does not exist** — it is evidence we have never recorded them.
 - **Corrected in:** both brains, the SIU research capture, the Pro extraction file, and this note.
 - **Next:** correct the SIU issues where the 08-16 sweep applied the merge (#18, #19, #23, #13, #7).
+
+## 2026-08-24 — #17 shape decided: invisible pilot confirmed, exit test moves to the town hall
+- **Decision:** the Atmospheric Groups pilot stays in SIU as an **invisible pilot**. No design change was needed, because that is already what #17 decided: *"Anyone can complete the Harmonica topic-proposal flow without joining or using Bluesky."* A follow is optional and grants only support-qualification and SIU standing availability. The #25 neutrality conflict is closed.
+- **Two corrections to comments made earlier the same day, both mine:**
+  - The #17 comment framed "invisible pilot" as something still to be designed and offered dropping the pilot as the alternative. It was already the design, and dropping it would now strand AV1 in production plus merged AV2 work.
+  - The #13 comment said proposing or scheduling a session requires an ATProto identity, a CA grant and an Avails record. **Proposing requires none of them.** The grant gates support-qualification and standing availability. The real gap is narrower: a non-ATProto participant can put a topic on the agenda but cannot help anything reach the support threshold, including their own.
+- **What moves:** #17's behavioral interoperability exit test — replace or bypass one application while retaining identity, relationships, agenda, records and knowledge — **runs at the CIBC town hall rather than waiting on the public event.** It needs a real group using the stack, not 50 strangers, and the 08-24 community-of-practice decision puts the town hall first. Better test bed on two counts: participants are known, so a failure can be debugged with the person it happened to; and CIBC members on CIBC infrastructure raise none of the questions #25 settles.
+- **Unchanged:** the constraint that the interop work must never grow an ask of participants in order to have something to measure. Holds whatever the venue.
+- **State:** comments on #17 and #13. No code changed, no acceptance box ticked. Only the venue for the last two changed.
+- **Next:** the AV2 non-ATProto support/availability gap now blocks the public event rather than the next thing that happens. Solve it before more AV2 lands on top.
