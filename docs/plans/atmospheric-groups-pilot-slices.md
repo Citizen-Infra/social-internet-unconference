@@ -128,10 +128,11 @@ scoped, revocable request through the SIU DID's discoverable Concierge and let a
 second compatible application resolve the same event/session reference without
 calling a Harmonica-specific or Community Admin-specific endpoint.
 
-This slice is deliberately deferred. It requires evidence from Community Admin
-#57/#59/#60 and HAR-1423. It must preserve AV1/AV2 stable topic IDs, canonical
-URLs, and event-participant semantics rather than migrating users to a new
-meaning of membership.
+This slice is deliberately deferred. It requires evidence from Community
+Admin's Atmospheric Groups work and Harmonica's consume-and-publish
+implementation. It must preserve AV1/AV2 stable topic IDs, canonical URLs, and
+event-participant semantics rather than migrating users to a new meaning of
+membership.
 
 Acceptance:
 

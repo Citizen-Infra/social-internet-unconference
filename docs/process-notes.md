@@ -58,7 +58,7 @@
 - **Impact:** Harmonica connects the SIU repository and selects the `unconference-brain/` directory as its managed container. V1-V8 references now use this model.
 
 ## 2026-08-11 — Atmospheric Groups interoperability pilot scoped
-- **Done:** Opened [SIU #17](https://github.com/Citizen-Infra/social-internet-unconference/issues/17) and Harmonica child issue [HAR-1546](https://linear.app/harmonica-pro/issue/HAR-1546), linked under the existing consume-and-publish direction in [HAR-1423](https://linear.app/harmonica-pro/issue/HAR-1423) and Community Admin's Atmospheric Groups epic [#56](https://github.com/Citizen-Infra/community-admin/issues/56).
+- **Done:** Opened [SIU #17](https://github.com/Citizen-Infra/social-internet-unconference/issues/17) as the public cross-repository checklist for the Atmospheric Groups interoperability pilot. Harmonica's consume-and-publish work and Community Admin's Atmospheric Groups work remain tracked in their owning repositories.
 - **Decisions:** Treat SIU as a concrete but non-blocking interoperability pilot. Harmonica consumes portable community identity and membership and publishes public-safe deliberation references; it does not become the identity provider. Community Admin remains the Concierge/permission boundary, and the GitHub brain remains canonical for topic and session meaning. Event attendance, session invitation, agenda participation, and standing community membership are distinct relationships.
 - **State:** The central identity question remains open by design: SIU may be its own DID-bearing group, an event owned by another group, or a collaboration spanning several groups. No unsettled Atmospheric Groups lexicon will be implemented merely to support the current launch.
 - **Next:** After agenda distribution, map the existing Community Admin-specific bridge to the community-DID target and decide the event-versus-community identity model before implementation.
@@ -102,8 +102,8 @@
 ## 2026-08-13 — V2 complete lifecycle validated
 - **Done:** Ran a fresh synthetic participant through the live proposal session with two topics: shaped and confirmed topic one, accepted continuation, shaped and confirmed topic two, declined a third, and received an explicit question-free closing turn. The stored thread became inactive.
 - **Result:** V2's multi-topic lifecycle and finality gate passes. SIU #16 now marks V2 complete.
-- **Residual:** Four of eight assistant turns used duplicate or compound question formulations despite the one-question rule. The stored transcript proves this is not MCP rendering. Exact evidence is recorded on existing Harmonica issue HAR-1217; it is a facilitation-quality defect, not a V2 finality blocker.
-- **Next:** Set the calling question/invitation and distribution channel, then implement AV1 under community-admin#135 and HAR-1547.
+- **Residual:** Four of eight assistant turns used duplicate or compound question formulations despite the one-question rule. The stored transcript proves this is not MCP rendering. It is a facilitation-quality defect, not a V2 finality blocker.
+- **Next:** Set the calling question/invitation and distribution channel, then implement AV1 across Community Admin and Harmonica.
 
 ## 2026-08-13 — QiQo walkthrough prepared
 - **Done:** Added `docs/research/2026-08-13-qiqo-walkthrough-brief.md`, grounded in QiQo's online-unconference guide, current IIW format, and IIW's QiQo-bound notes process.
@@ -121,7 +121,7 @@
 - **Session:** OpenCode `ses_00fe2c0d4fferrMs11kZk5vuBI`.
 - **Verified:** Railway remote MCP is installed and authenticated. Community Admin and Avails production both carry the variables needed for their trusted membership seam (`CA_CONFIG_SECRET` plus Avails' `CA_MEMBERSHIP_URL`); OAuth access exposes variable names, not secret values.
 - **Production state:** Avails' public `/api/communities` response currently contains only `cibc`, so SIU is not yet selectable there. Avails consumes CA memberships; it must not verify Bluesky follows directly.
-- **Tracking:** SIU #17 is the cross-repository checklist. AV1 implementation remains in community-admin#135 and HAR-1547. Avails#178 owns later readiness; the AV2 event-grant consumer contract still needs implementation planning before assigning it to an Avails issue.
+- **Tracking:** SIU #17 is the public cross-repository checklist. AV1 implementation remains split between Community Admin and Harmonica. Avails#178 owns later readiness; the AV2 event-grant consumer contract still needs implementation planning before assigning it to an Avails issue.
 - **Correction:** Community-admin#136 grants ordinary CA membership from follows and is not an SIU dependency. SIU deliberately uses the separate `event_participants` bridge in community-admin#135 so following grants event-scoped capabilities rather than standing membership. Avails must consume that event grant in AV2, not infer SIU participation from ordinary CA memberships.
 - **Next:** Implement AV1 from the existing plan under community-admin#135, starting with migration 022 and the follow-grant verifier. Configure the SIU service credential only when the publish path is ready for an end-to-end test.
 
@@ -169,7 +169,7 @@
 - **Correction:** This merge completes the Community Admin caller and aggregate storage, not the full readiness projection. Harmonica must still render `needs support`, `needs availability`, or `ready` without exposing supporter identities or individual windows.
 - **Next:** Implement the Harmonica aggregate readiness projection.
 - **Next:** Confirm Community Admin and Avails deployment state and production configuration before validating SIU writes, revocation, restoration, and shared three-person overlap.
-- **Next:** Run HAR-1545's retrospective audit of SIU PRs #660-664 and their combined behavior on current `main`.
+- **Next:** Run the retrospective audit of the five Harmonica SIU pull requests and their combined behavior on current `main`.
 - **Next:** Resolve SIU #8's reflection timing, session closure, and synthesis publication design.
 - **Next:** Complete the deferred AV3 proof with an independent consumer, application replacement, and scoped Concierge delegation.
 

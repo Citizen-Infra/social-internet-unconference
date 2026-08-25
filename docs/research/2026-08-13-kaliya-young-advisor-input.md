@@ -135,6 +135,5 @@ pre-selected SIU platform.
   state.
 - Reframe issue #3 from tracks to a calling question and invitation.
 - Add a QiQo walkthrough/comparative-layout step to issue #6.
-- Add the behavioral exit test and three-layer review to issue #17 and
-  HAR-1546.
+- Add the behavioral exit test and three-layer review to issue #17.
 - Keep the interoperability proof non-blocking for agenda distribution.

@@ -6,7 +6,7 @@ shaping: true
 
 **Status:** Shape D selected, event identity provisioned, breadboarded, and sliced
 **Date:** 2026-08-12
-**Tracks:** SIU #17, HAR-1546, community-admin #56
+**Public tracker:** SIU #17
 
 ## Context
 

@@ -1,0 +1,28 @@
+name: Public documentation policy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  private-tracker-references:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reject private Harmonica ticket references
+        shell: bash
+        run: |
+          if git grep -n -i -E '(^|[^[:alnum:]])HAR-[0-9]+' -- .; then
+            echo "Private Harmonica ticket IDs do not belong in this public repository."
+            exit 1
+          fi
+
+          if git ls-files | grep -i -E '(^|[^[:alnum:]])HAR-[0-9]+'; then
+            echo "Tracked file paths must not contain private Harmonica ticket IDs."
+            exit 1
+          fi
