@@ -55,11 +55,11 @@ Her objection was about where power concentrates, not about ritual. Self-organis
 
 Everything above is therefore adopted as-designed, and the experiment is confined to how sessions get scheduled across participants' real availability.
 
-## What the 2026-08-24 deferral changes
+## Where this gets tested first
 
-The public unconference is deferred behind a trigger (`cibc-brain/decisions/2026-08-24-community-of-practice-precedes-the-unconference.md`), so none of this is scheduled. It is not therefore idle. The community-of-practice experiment at the next CIBC town hall exercises the same mechanics with people who already know each other, and #26's advice applies to it directly: run the opening circle as designed there, at town-hall scale, before it has to work at public scale.
+No date is set, so none of this is scheduled yet. It is not therefore idle. A CIBC town hall exercises the same mechanics at smaller scale with people who already know each other, and #26's advice applies there directly: run the opening circle as designed at that scale before it has to work at public scale.
 
-That makes the town hall the first test of this format decision rather than a separate track.
+Sequencing it that way is the cheap way to find out what the format actually does before anyone's calendar is committed to a public date.
 
 ## The one open call
 
@@ -72,4 +72,4 @@ Recommendation: **the single block for the first run.** It is the smaller thing 
 
 ## What stays unresolved
 
-**Kaliya's critical mass of ~50 people for an online opening.** That is a materially higher bar than a topic clearing three upvotes, and #24 flags it correctly: if SIU cannot convene fifty people into one opening, that is an argument about the format's viability rather than a detail to route around. Nothing here resolves it, and the town-hall run will not either, since town-hall attendance is much smaller. It stays open against the public event.
+**Kaliya's critical mass of ~50 people for an online opening.** That is a materially higher bar than a topic clearing three upvotes, and #24 flags it correctly: if SIU cannot convene fifty people into one opening, that is an argument about the format's viability rather than a detail to route around. Nothing here resolves it, and a smaller-scale run will not either. It stays open against the public event.
